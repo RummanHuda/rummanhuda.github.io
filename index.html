@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name — Portfolio</title>
+  <title>Md Rumman Huda Sarkar — Network & Telecom Engineer</title>
   <style>
     :root {
       --bg: #fafafa;
@@ -19,7 +19,7 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
-      max-width: 780px;
+      max-width: 820px;
       margin: 0 auto;
       padding: 3rem 1.5rem;
     }
@@ -30,7 +30,8 @@
     }
     h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; }
     .subtitle { color: var(--muted); font-size: 1.05rem; margin-top: 0.35rem; }
-    .links { margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 1rem; }
+    .summary { margin-top: 0.85rem; color: var(--muted); font-size: 0.95rem; }
+    .links { margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.75rem; }
     .links a {
       text-decoration: none;
       color: var(--text);
@@ -56,13 +57,20 @@
       color: var(--muted);
       margin-bottom: 1rem;
     }
-    .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .skill-group { margin-bottom: 0.9rem; }
+    .skill-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
     .tag {
       background: var(--surface);
       border: 1px solid var(--border);
-      padding: 0.35rem 0.75rem;
+      padding: 0.28rem 0.7rem;
       border-radius: 999px;
-      font-size: 0.88rem;
+      font-size: 0.84rem;
     }
     .card {
       background: var(--surface);
@@ -75,26 +83,25 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      gap: 1rem;
-      margin-bottom: 0.4rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.35rem;
     }
     .card h3 { font-size: 1.05rem; font-weight: 600; }
-    .card span { font-size: 0.85rem; color: var(--muted); }
-    .card p { font-size: 0.95rem; color: var(--muted); }
-    .card a {
-      display: inline-block;
-      margin-top: 0.65rem;
-      font-size: 0.88rem;
-      color: var(--text);
-      font-weight: 500;
-    }
-    ul.cert-list { list-style: none; }
+    .card .meta { font-size: 0.9rem; font-weight: 500; color: var(--text); margin-bottom: 0.5rem; }
+    .card span.date { font-size: 0.85rem; color: var(--muted); }
+    .card p, .card ul { font-size: 0.94rem; color: var(--muted); }
+    .card ul { padding-left: 1.2rem; margin-top: 0.35rem; }
+    .card li { margin-bottom: 0.25rem; }
+    ul.cert-list { list-style: none; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 0 1.25rem; }
     ul.cert-list li {
-      padding: 0.65rem 0;
+      padding: 0.8rem 0;
       border-bottom: 1px solid var(--border);
       display: flex;
       justify-content: space-between;
-      font-size: 0.95rem;
+      align-items: baseline;
+      gap: 1rem;
+      font-size: 0.94rem;
     }
     ul.cert-list li:last-child { border-bottom: none; }
     footer {
@@ -109,47 +116,139 @@
 <body>
 
   <header>
-    <h1>Your Full Name</h1>
-    <p class="subtitle">Your Role / Specialization &bull; City, Country</p>
-    <p style="margin-top: 0.85rem; color: var(--muted); font-size: 0.95rem;">
-      A concise 2-sentence summary of who you are, what problems you solve, and what opportunities you are looking for.
+    <h1>Md Rumman Huda Sarkar</h1>
+    <p class="subtitle">Network Operations &amp; Telecom Engineer &bull; Montreal, QC, Canada</p>
+    <p class="summary">
+      Network Operations Engineer with 16 months of hands-on RAN maintenance and surveillance experience at Banglalink, currently completing an MEng in Electrical and Computer Engineering at Concordia University. Skilled in alarm analysis, KPI troubleshooting, and field coordination, seeking a Network/Telecom Engineering role focused on network stability and advanced RF/network optimization.
     </p>
     <div class="links">
       <a href="resume.pdf" target="_blank" class="primary">Download CV (PDF)</a>
-      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-      <a href="mailto:you@example.com">Email</a>
+      <a href="mailto:rumman3476@gmail.com">rumman3476@gmail.com</a>
+      <a href="tel:+14384026789">+1 438 402 6789</a>
+      <a href="https://www.linkedin.com" target="_blank">LinkedIn (Rumman Huda)</a>
+      <a href="https://github.com" target="_blank">GitHub</a>
     </div>
   </header>
 
   <section id="expertise">
-    <h2>Areas of Expertise</h2>
-    <div class="tags">
-      <span class="tag">Skill / Domain 1</span>
-      <span class="tag">Skill / Domain 2</span>
-      <span class="tag">Programming Language</span>
-      <span class="tag">Tools &amp; Frameworks</span>
-      <span class="tag">System Architecture</span>
+    <h2>Technical Expertise</h2>
+
+    <div class="skill-group">
+      <div class="skill-label">Networking &amp; Protocols</div>
+      <div class="tags">
+        <span class="tag">TCP/IP &amp; UDP</span>
+        <span class="tag">OSI Model</span>
+        <span class="tag">OSPF &amp; BGP</span>
+        <span class="tag">VLANs &amp; STP</span>
+        <span class="tag">DNS &amp; DHCP</span>
+        <span class="tag">VPN &amp; ACLs</span>
+        <span class="tag">LAN/WAN</span>
+        <span class="tag">LTE/5G &amp; Open RAN</span>
+        <span class="tag">RET &amp; BTS Upgrades</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-label">NOC &amp; Network Monitoring</div>
+      <div class="tags">
+        <span class="tag">Incident &amp; Fault Management</span>
+        <span class="tag">Alarm &amp; KPI Analysis</span>
+        <span class="tag">Root Cause Analysis (RCA)</span>
+        <span class="tag">SLA Compliance</span>
+        <span class="tag">SNMP</span>
+        <span class="tag">Grafana</span>
+        <span class="tag">Nagios / Zabbix</span>
+        <span class="tag">Jira</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-label">Systems, Programming &amp; Simulation</div>
+      <div class="tags">
+        <span class="tag">Linux (Ubuntu/RHEL)</span>
+        <span class="tag">Windows Server &amp; AD</span>
+        <span class="tag">Bash &amp; PowerShell</span>
+        <span class="tag">VMware &amp; Docker</span>
+        <span class="tag">Python &amp; Pandas</span>
+        <span class="tag">C++</span>
+        <span class="tag">MATLAB</span>
+        <span class="tag">QualNet</span>
+        <span class="tag">Cadence Virtuoso</span>
+        <span class="tag">ModelSim &amp; Quartus Prime</span>
+        <span class="tag">Arduino</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Work Experience</h2>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Brand Advocate (Qualcomm)</h3>
+        <span class="date">July 2024 &ndash; Ongoing</span>
+      </div>
+      <div class="meta">Channel Partners Solutions LLC &bull; Canada</div>
+      <ul>
+        <li>Advised customers and partners, delivered product demos and technical support, and gathered market feedback.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Network Operations Engineer</h3>
+        <span class="date">Jan 2023 &ndash; Apr 2024</span>
+      </div>
+      <div class="meta">Banglalink Digital Communications Ltd</div>
+      <ul>
+        <li>Performed Level-1 maintenance including RET configuration, BTS software upgrades, and alarm logic changes.</li>
+        <li>Monitored, prioritized, and diagnosed faults across RAN network elements by severity.</li>
+        <li>Tracked KPIs and performed root cause analysis for Site/Cell downs and network-wide KPI fluctuations.</li>
+        <li>Coordinated with internal and external teams on work orders, planned maintenance, and emergency activities.</li>
+      </ul>
     </div>
   </section>
 
   <section id="projects">
-    <h2>Selected Projects</h2>
+    <h2>Projects &amp; Research</h2>
+
     <div class="card">
       <div class="card-header">
-        <h3>Project Title One</h3>
-        <span>2026</span>
+        <h3>Security and Privacy in Emerging 6G Networks</h3>
+        <span class="date">2026</span>
       </div>
-      <p>Brief description of the problem, the tools/technologies used, and the measurable outcome.</p>
-      <a href="https://github.com/yourusername/project-one" target="_blank">View Repository &rarr;</a>
+      <p>Evaluated AI-driven 6G Open RAN security and privacy solutions, methodologies, and open research gaps.</p>
     </div>
+
     <div class="card">
       <div class="card-header">
-        <h3>Project Title Two</h3>
-        <span>2025</span>
+        <h3>Wireless Multi-Hop Network Design and Simulation (QualNet 8.2)</h3>
+        <span class="date">2025</span>
       </div>
-      <p>Brief description of what you built and the key technical takeaway.</p>
-      <a href="https://github.com/yourusername/project-two" target="_blank">View Repository &rarr;</a>
+      <ul>
+        <li>Benchmarked TCP vs. UDP across routed subnets evaluating throughput, delay, retransmissions, and MAC overhead.</li>
+        <li>Measured the impact of Rayleigh fading on delay and throughput across concurrent UDP flows.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Last Mile Solution for High-Speed Communication Systems</h3>
+        <span class="date">2021 &ndash; 2022</span>
+      </div>
+      <div class="meta">Research Experience &bull; Bangladesh</div>
+      <p>Assessed last-mile connectivity challenges and proposed suitable communication technologies and policy measures.</p>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <div class="card-header">
+        <h3>MEng, Electrical and Computer Engineering</h3>
+        <span class="date">Sep 2024 &ndash; Dec 2026</span>
+      </div>
+      <div class="meta">Concordia University &bull; Montreal, QC, Canada</div>
     </div>
   </section>
 
@@ -157,18 +256,22 @@
     <h2>Certifications</h2>
     <ul class="cert-list">
       <li>
-        <span><strong>Certification Name</strong> — Issuing Organization</span>
-        <span style="color: var(--muted);">Year</span>
+        <span><strong>Graduate Leadership Program</strong> — GradProSkills (Concordia University)</span>
+        <span class="date">Sep 2024</span>
       </li>
       <li>
-        <span><strong>Second Certification Name</strong> — Issuing Organization</span>
-        <span style="color: var(--muted);">Year</span>
+        <span><strong>Business Analytics with Excel: Elementary to Advanced</strong> — Johns Hopkins University</span>
+        <span class="date">May 2024</span>
+      </li>
+      <li>
+        <span><strong>Crash Course on Python</strong> — Google</span>
+        <span class="date">May 2023</span>
       </li>
     </ul>
   </section>
 
   <footer>
-    &copy; 2026 Your Full Name. Built and hosted for free with GitHub Pages.
+    &copy; 2026 Md Rumman Huda Sarkar &bull; Montreal, QC, Canada
   </footer>
 
 </body>
