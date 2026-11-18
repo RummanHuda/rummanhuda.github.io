@@ -1,278 +1,1065 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Md Rumman Huda Sarkar — Network & Telecom Engineer</title>
+  <title>Md Rumman Huda Sarkar — Electrical Engineer</title>
+  <meta name="description" content="Portfolio of Md Rumman Huda Sarkar — Electrical Engineer &amp; MEng ECE Candidate at Concordia University specializing in RAN, 5G/6G, and Network Optimization." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #fafafa;
-      --surface: #ffffff;
-      --text: #18181b;
-      --muted: #52525b;
-      --border: #e4e4e7;
-      --accent: #0f172a;
+      --display: "Sora", "Inter", system-ui, sans-serif;
+      --body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, monospace;
+      --radius: 12px;
     }
+
+    :root,
+    :root[data-theme="dark"] {
+      --bg: #060a13;
+      --bg-elevated: #0c1322;
+      --bg-card: rgba(12, 19, 34, 0.74);
+      --border: rgba(130, 170, 255, 0.13);
+      --border-hover: rgba(61, 209, 255, 0.5);
+      --text: #eaf1fb;
+      --text-secondary: #a7b4c8;
+      --text-muted: #74829a;
+      --accent: #3dd1ff;
+      --accent-2: #7c8cff;
+      --accent-glow: rgba(61, 209, 255, 0.16);
+      --badge-bg: rgba(61, 209, 255, 0.1);
+      --nav-bg: rgba(6, 10, 19, 0.82);
+      --on-accent: #031420;
+      --shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.8);
+    }
+
+    :root[data-theme="light"] {
+      --bg: #f2f5fa;
+      --bg-elevated: #ffffff;
+      --bg-card: rgba(255, 255, 255, 0.86);
+      --border: rgba(15, 30, 60, 0.1);
+      --border-hover: rgba(11, 107, 203, 0.5);
+      --text: #0a1220;
+      --text-secondary: #3b475a;
+      --text-muted: #66738a;
+      --accent: #0b6bcb;
+      --accent-2: #5b5bd6;
+      --accent-glow: rgba(11, 107, 203, 0.1);
+      --badge-bg: rgba(11, 107, 203, 0.08);
+      --nav-bg: rgba(242, 245, 250, 0.86);
+      --on-accent: #ffffff;
+      --shadow: 0 20px 40px -22px rgba(15, 30, 60, 0.22);
+    }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.65;
+      font-family: var(--body);
+      background-color: var(--bg);
       color: var(--text);
-      line-height: 1.6;
-      max-width: 820px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      background-image:
+        radial-gradient(ellipse 80% 50% at 50% -10%, var(--accent-glow), transparent),
+        linear-gradient(to right, var(--border) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+      background-size: 100% 100%, 56px 56px, 56px 56px;
+      background-position: top center, center top, center top;
     }
-    header {
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+    #progress {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      z-index: 200;
+      transform: scaleX(0);
+      transform-origin: 0 50%;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      background: var(--nav-bg);
       border-bottom: 1px solid var(--border);
-      padding-bottom: 2rem;
-      margin-bottom: 2.5rem;
     }
-    h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; }
-    .subtitle { color: var(--muted); font-size: 1.05rem; margin-top: 0.35rem; }
-    .summary { margin-top: 0.85rem; color: var(--muted); font-size: 0.95rem; }
-    .links { margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.75rem; }
-    .links a {
-      text-decoration: none;
-      color: var(--text);
-      font-size: 0.9rem;
+    .nav-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+    .brand {
+      font-family: var(--mono);
       font-weight: 500;
-      padding: 0.4rem 0.85rem;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      background: var(--surface);
-      transition: border-color 0.2s;
-    }
-    .links a:hover { border-color: var(--text); }
-    .links a.primary {
-      background: var(--accent);
-      color: #ffffff;
-      border-color: var(--accent);
-    }
-    section { margin-bottom: 2.75rem; }
-    h2 {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
-    .skill-group { margin-bottom: 0.9rem; }
-    .skill-label {
-      font-size: 0.85rem;
-      font-weight: 600;
+      font-size: 0.92rem;
       color: var(--text);
-      margin-bottom: 0.4rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      white-space: nowrap;
     }
-    .tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
-    .tag {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 0.28rem 0.7rem;
-      border-radius: 999px;
-      font-size: 0.84rem;
+    .dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 10px #22c55e;
+      flex: none;
     }
-    .card {
-      background: var(--surface);
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      min-width: 0;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+    }
+
+    .theme-btn {
+      background: var(--bg-elevated);
       border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.42rem 0.75rem;
       border-radius: 8px;
-      padding: 1.25rem;
-      margin-bottom: 1rem;
+      cursor: pointer;
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: border-color 0.2s, transform 0.15s;
+      white-space: nowrap;
     }
-    .card-header {
+    .theme-btn:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-1px);
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+    #mesh {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      z-index: 0;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background: radial-gradient(ellipse 65% 75% at 28% 45%, var(--bg) 0%, transparent 72%);
+      opacity: 0.82;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 5rem 1.5rem 2.5rem;
+    }
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      background: var(--badge-bg);
+      border: 1px solid var(--border-hover);
+      color: var(--accent);
+      font: 400 0.78rem var(--mono);
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font: 700 clamp(2.5rem, 6.8vw, 4.6rem)/1.04 var(--display);
+      letter-spacing: -0.035em;
+      margin-bottom: 1rem;
+      max-width: 15ch;
+    }
+    .hero-role {
+      font: 600 clamp(1.1rem, 2.2vw, 1.4rem) var(--display);
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+    }
+    .hero-summary {
+      max-width: 700px;
+      color: var(--text-secondary);
+      font-size: 1.02rem;
+      margin-bottom: 2rem;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      align-items: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.66rem 1.15rem;
+      border-radius: 8px;
+      font: 500 0.9rem var(--body);
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      backdrop-filter: blur(8px);
+      color: var(--text);
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: var(--on-accent);
+      border: none;
+      font-weight: 600;
+    }
+    .btn-primary:hover {
+      color: var(--on-accent);
+    }
+
+    .hud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1.75rem;
+      margin-top: 2.5rem;
+      font: 400 0.78rem var(--mono);
+      color: var(--text-muted);
+    }
+    .hud b { color: var(--accent); font-weight: 500; }
+    .hud .live { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-secondary); }
+
+    /* Sections */
+    main { max-width: 1040px; margin: 0 auto; padding: 4.5rem 1.5rem 3.5rem; }
+    section { margin-bottom: 5rem; scroll-margin-top: 5rem; }
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-title { font: 700 1.6rem var(--display); letter-spacing: -0.02em; }
+
+    .bento-card,
+    .timeline-item,
+    .project-card,
+    .cert-card,
+    .quote-box {
+      position: relative;
+      background: var(--bg-card);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    }
+    .bento-card::after,
+    .project-card::after,
+    .cert-card::after,
+    .quote-box::after {
+      content: "";
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      top: -1px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+    .bento-card:hover,
+    .project-card:hover,
+    .cert-card:hover,
+    .timeline-item:hover,
+    .quote-box:hover {
+      border-color: var(--border-hover);
+    }
+    .bento-card:hover::after,
+    .project-card:hover::after,
+    .cert-card:hover::after,
+    .quote-box:hover::after {
+      opacity: 1;
+    }
+
+    .bento-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.1rem; }
+    .bento-card { padding: 1.45rem; }
+    .bento-card h3 {
+      font: 600 1rem var(--display);
+      margin-bottom: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .bento-card h3::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 2px;
+      background: var(--accent);
+      box-shadow: 0 0 10px var(--accent);
+      flex: none;
+    }
+    .pill-wrap { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+    .pill {
+      font: 400 0.78rem var(--mono);
+      padding: 0.3rem 0.68rem;
+      border-radius: 6px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 1.75rem;
+      border-left: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .timeline-item { padding: 1.5rem; }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -2.18rem;
+      top: 1.65rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 3px solid var(--bg);
+      box-shadow: 0 0 0 2px var(--accent), 0 0 14px var(--accent);
+    }
+    .item-top {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
+      align-items: flex-start;
       flex-wrap: wrap;
       gap: 0.5rem;
       margin-bottom: 0.35rem;
     }
-    .card h3 { font-size: 1.05rem; font-weight: 600; }
-    .card .meta { font-size: 0.9rem; font-weight: 500; color: var(--text); margin-bottom: 0.5rem; }
-    .card span.date { font-size: 0.85rem; color: var(--muted); }
-    .card p, .card ul { font-size: 0.94rem; color: var(--muted); }
-    .card ul { padding-left: 1.2rem; margin-top: 0.35rem; }
-    .card li { margin-bottom: 0.25rem; }
-    ul.cert-list { list-style: none; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 0 1.25rem; }
-    ul.cert-list li {
-      padding: 0.8rem 0;
-      border-bottom: 1px solid var(--border);
+    .item-title { font: 600 1.1rem var(--display); }
+    .item-date {
+      font: 400 0.8rem var(--mono);
+      color: var(--accent);
+      background: var(--badge-bg);
+      padding: 0.22rem 0.65rem;
+      border-radius: 999px;
+    }
+    .item-org { font-size: 0.92rem; font-weight: 500; color: var(--text-secondary); margin-bottom: 0.85rem; }
+    .timeline-item > .item-org:last-child { margin-bottom: 0; }
+    .item-list { padding-left: 1.15rem; color: var(--text-secondary); font-size: 0.93rem; }
+    .item-list li { margin-bottom: 0.4rem; }
+
+    .filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .filter-btn {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      font: 400 0.82rem var(--body);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--badge-bg);
+      border-color: var(--border-hover);
+      color: var(--accent);
+    }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem; }
+    .project-card { padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; }
+    .project-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .project-card.hidden { display: none; }
+    .project-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem; }
+    .project-type { font: 400 0.78rem var(--mono); color: var(--accent); }
+    .project-year { font: 400 0.8rem var(--mono); color: var(--text-muted); }
+    .project-card h3 { font: 600 1.08rem/1.35 var(--display); margin-bottom: 0.65rem; }
+    .project-card p, .project-card ul { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.15rem; }
+    .project-card ul { padding-left: 1.1rem; }
+    .project-card li { margin-bottom: 0.35rem; }
+
+    .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+    .cert-card { padding: 1.25rem 1.35rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.75rem; }
+    .cert-title { font-weight: 600; font-size: 0.98rem; }
+    .cert-footer { display: flex; justify-content: space-between; align-items: center; gap: 1rem; font-size: 0.83rem; color: var(--text-muted); }
+    .cert-id { font: 400 0.78rem var(--mono); }
+    .cert-link { color: var(--accent); text-decoration: none; font-weight: 500; }
+    .cert-link:hover { text-decoration: underline; }
+
+    /* Motivating Quote Section */
+    .quote-section {
+      max-width: 1040px;
+      margin: 0 auto 3.5rem;
+      padding: 0 1.5rem;
+    }
+    .quote-box {
+      padding: 1.6rem 1.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .quote-top {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
+      align-items: center;
       gap: 1rem;
-      font-size: 0.94rem;
     }
-    ul.cert-list li:last-child { border-bottom: none; }
+    .quote-tag {
+      font: 500 0.75rem var(--mono);
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .quote-refresh {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      font: 400 0.75rem var(--mono);
+      padding: 0.28rem 0.65rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .quote-refresh:hover {
+      border-color: var(--border-hover);
+      color: var(--accent);
+    }
+    .quote-text {
+      font: 500 1.05rem/1.55 var(--display);
+      color: var(--text);
+    }
+    .quote-author {
+      font: 400 0.82rem var(--mono);
+      color: var(--text-muted);
+    }
+
     footer {
-      margin-top: 3rem;
-      padding-top: 1.5rem;
       border-top: 1px solid var(--border);
-      font-size: 0.85rem;
-      color: var(--muted);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin-bottom: 0.85rem;
+    }
+    .footer-links a { color: var(--text-secondary); text-decoration: none; }
+    .footer-links a:hover { color: var(--accent); }
+
+    @media (max-width: 680px) {
+      .brand .txt { display: none; }
+      .nav-links { flex: 1; overflow-x: auto; gap: 1.1rem; scrollbar-width: none; }
+      .hero-inner { padding-top: 3.25rem; }
+      main { padding-top: 3rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
     }
   </style>
 </head>
 <body>
+  <div id="progress"></div>
 
-  <header>
-    <h1>Md Rumman Huda Sarkar</h1>
-    <p class="subtitle">Network Operations &amp; Telecom Engineer &bull; Montreal, QC, Canada</p>
-    <p class="summary">
-      Network Operations Engineer with 16 months of hands-on RAN maintenance and surveillance experience at Banglalink, currently completing an MEng in Electrical and Computer Engineering at Concordia University. Skilled in alarm analysis, KPI troubleshooting, and field coordination, seeking a Network/Telecom Engineering role focused on network stability and advanced RF/network optimization.
-    </p>
-    <div class="links">
-      <a href="resume.pdf" target="_blank" class="primary">Download CV (PDF)</a>
-      <a href="mailto:rumman3476@gmail.com">rumman3476@gmail.com</a>
-      <a href="tel:+14384026789">+1 438 402 6789</a>
-      <a href="https://www.linkedin.com" target="_blank">LinkedIn (Rumman Huda)</a>
-      <a href="https://github.com" target="_blank">GitHub</a>
+  <nav>
+    <div class="nav-inner">
+      <a href="#top" class="brand"><span class="dot"></span><span class="txt">rummanhuda.github.io</span></a>
+      <div class="nav-links">
+        <a href="#expertise">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+      </div>
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle dark and light theme">
+        <span id="themeIcon">☀️</span>
+        <span id="themeLabel">Light</span>
+      </button>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <canvas id="mesh" aria-hidden="true"></canvas>
+    <div class="hero-inner">
+      <div class="status-pill">
+        <i class="dot"></i> Open to Electrical Engineering Roles &bull; Montreal, QC
+      </div>
+      <h1>Md Rumman Huda Sarkar</h1>
+      <div class="hero-role">Electrical Engineer &amp; MEng ECE Candidate</div>
+      <p class="hero-summary">
+        Electrical Engineer with 16 months of hands-on RAN maintenance and surveillance experience at Banglalink, currently completing an MEng in Electrical and Computer Engineering at Concordia University. Skilled in alarm analysis, KPI troubleshooting, and field coordination—focused on keeping telecom infrastructure resilient and advancing into RF and network optimization.
+      </p>
+
+      <div class="hero-actions">
+        <a href="resume.pdf" target="_blank" class="btn btn-primary">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download CV (PDF)
+        </a>
+        <button class="btn" id="copyEmailBtn" data-email="rumman3476@gmail.com">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <span id="copyEmailText">rumman3476@gmail.com</span>
+        </button>
+        <a href="https://github.com/rummanhuda" target="_blank" class="btn">GitHub</a>
+        <a href="https://www.linkedin.com/in/rummanhuda/" target="_blank" class="btn">LinkedIn</a>
+        <a href="tel:+14384026789" class="btn">+1 438 402 6789</a>
+      </div>
+
+      <div class="hud" aria-hidden="true">
+        <span class="live"><i class="dot"></i>live handover demo</span>
+        <span>serving cell <b id="hudCell">BTS-01</b></span>
+        <span>signal <b id="hudSig">-80 dBm</b></span>
+        <span>handovers <b id="hudHo">0</b></span>
+        <span>Move your cursor (or drag a finger): you are the phone.</span>
+      </div>
     </div>
   </header>
 
-  <section id="expertise">
-    <h2>Technical Expertise</h2>
-
-    <div class="skill-group">
-      <div class="skill-label">Networking &amp; Protocols</div>
-      <div class="tags">
-        <span class="tag">TCP/IP &amp; UDP</span>
-        <span class="tag">OSI Model</span>
-        <span class="tag">OSPF &amp; BGP</span>
-        <span class="tag">VLANs &amp; STP</span>
-        <span class="tag">DNS &amp; DHCP</span>
-        <span class="tag">VPN &amp; ACLs</span>
-        <span class="tag">LAN/WAN</span>
-        <span class="tag">LTE/5G &amp; Open RAN</span>
-        <span class="tag">RET &amp; BTS Upgrades</span>
+  <main>
+    <!-- Technical Expertise -->
+    <section id="expertise">
+      <div class="section-header">
+        <h2 class="section-title">Technical Expertise</h2>
       </div>
-    </div>
 
-    <div class="skill-group">
-      <div class="skill-label">NOC &amp; Network Monitoring</div>
-      <div class="tags">
-        <span class="tag">Incident &amp; Fault Management</span>
-        <span class="tag">Alarm &amp; KPI Analysis</span>
-        <span class="tag">Root Cause Analysis (RCA)</span>
-        <span class="tag">SLA Compliance</span>
-        <span class="tag">SNMP</span>
-        <span class="tag">Grafana</span>
-        <span class="tag">Nagios / Zabbix</span>
-        <span class="tag">Jira</span>
+      <div class="bento-grid">
+        <div class="bento-card">
+          <h3>Networking &amp; Wireless Protocols</h3>
+          <div class="pill-wrap">
+            <span class="pill">TCP/IP</span>
+            <span class="pill">UDP</span>
+            <span class="pill">OSI Model</span>
+            <span class="pill">OSPF</span>
+            <span class="pill">BGP</span>
+            <span class="pill">VLANs</span>
+            <span class="pill">STP</span>
+            <span class="pill">DNS / DHCP</span>
+            <span class="pill">VPN &amp; ACLs</span>
+            <span class="pill">LAN/WAN</span>
+            <span class="pill">LTE / 5G</span>
+            <span class="pill">Open RAN</span>
+            <span class="pill">RET Configuration</span>
+            <span class="pill">BTS Upgrades</span>
+            <span class="pill">HTTP/2 &amp; CDN</span>
+          </div>
+        </div>
+
+        <div class="bento-card">
+          <h3>NOC &amp; Network Monitoring</h3>
+          <div class="pill-wrap">
+            <span class="pill">Incident &amp; Fault Management</span>
+            <span class="pill">Alarm &amp; KPI Analysis</span>
+            <span class="pill">Root Cause Analysis (RCA)</span>
+            <span class="pill">SLA Compliance</span>
+            <span class="pill">SNMP</span>
+            <span class="pill">Grafana</span>
+            <span class="pill">Nagios / Zabbix</span>
+            <span class="pill">Jira</span>
+          </div>
+        </div>
+
+        <div class="bento-card">
+          <h3>Systems &amp; Infrastructure</h3>
+          <div class="pill-wrap">
+            <span class="pill">Linux (Ubuntu / RHEL)</span>
+            <span class="pill">Windows Server</span>
+            <span class="pill">Active Directory (AD)</span>
+            <span class="pill">Bash Scripting</span>
+            <span class="pill">PowerShell</span>
+            <span class="pill">VMware</span>
+            <span class="pill">Docker</span>
+          </div>
+        </div>
+
+        <div class="bento-card">
+          <h3>Programming, Simulation &amp; EDA</h3>
+          <div class="pill-wrap">
+            <span class="pill">Python</span>
+            <span class="pill">C++</span>
+            <span class="pill">Pandas</span>
+            <span class="pill">MATLAB</span>
+            <span class="pill">QualNet 8.2</span>
+            <span class="pill">Cadence Virtuoso</span>
+            <span class="pill">ModelSim</span>
+            <span class="pill">Quartus Prime</span>
+            <span class="pill">Arduino</span>
+            <span class="pill">Signal Processing</span>
+            <span class="pill">STM32 / ESP32</span>
+            <span class="pill">VLSI Design</span>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="skill-group">
-      <div class="skill-label">Systems, Programming &amp; Simulation</div>
-      <div class="tags">
-        <span class="tag">Linux (Ubuntu/RHEL)</span>
-        <span class="tag">Windows Server &amp; AD</span>
-        <span class="tag">Bash &amp; PowerShell</span>
-        <span class="tag">VMware &amp; Docker</span>
-        <span class="tag">Python &amp; Pandas</span>
-        <span class="tag">C++</span>
-        <span class="tag">MATLAB</span>
-        <span class="tag">QualNet</span>
-        <span class="tag">Cadence Virtuoso</span>
-        <span class="tag">ModelSim &amp; Quartus Prime</span>
-        <span class="tag">Arduino</span>
+    <!-- Experience -->
+    <section id="experience">
+      <div class="section-header">
+        <h2 class="section-title">Work Experience</h2>
       </div>
-    </div>
-  </section>
 
-  <section id="experience">
-    <h2>Work Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="item-top">
+            <div class="item-title">Brand Advocate (Qualcomm)</div>
+            <span class="item-date">July 2024 &ndash; Ongoing</span>
+          </div>
+          <div class="item-org">Channel Partners Solutions LLC &bull; Canada</div>
+          <ul class="item-list">
+            <li>Advised customers and retail/channel partners on Qualcomm technologies, delivered live product demos and technical support, and gathered actionable market feedback.</li>
+          </ul>
+        </div>
 
-    <div class="card">
-      <div class="card-header">
-        <h3>Brand Advocate (Qualcomm)</h3>
-        <span class="date">July 2024 &ndash; Ongoing</span>
+        <div class="timeline-item">
+          <div class="item-top">
+            <div class="item-title">RAN &amp; Telecom Engineer</div>
+            <span class="item-date">Jan 2023 &ndash; Apr 2024</span>
+          </div>
+          <div class="item-org">Banglalink Digital Communications Ltd</div>
+          <ul class="item-list">
+            <li>Executed Level-1 RAN maintenance including Remote Electrical Tilt (RET) configuration, BTS software upgrades, and alarm logic modifications.</li>
+            <li>Monitored, prioritized, and diagnosed real-time faults across RAN network elements based on SLA severity.</li>
+            <li>Tracked network KPIs and conducted root cause analysis (RCA) for Site/Cell outages and network-wide performance fluctuations.</li>
+            <li>Coordinated with internal engineering teams and external field vendors on work orders, planned maintenance windows, and emergency recoveries.</li>
+          </ul>
+        </div>
       </div>
-      <div class="meta">Channel Partners Solutions LLC &bull; Canada</div>
-      <ul>
-        <li>Advised customers and partners, delivered product demos and technical support, and gathered market feedback.</li>
-      </ul>
-    </div>
+    </section>
 
-    <div class="card">
-      <div class="card-header">
-        <h3>Network Operations Engineer</h3>
-        <span class="date">Jan 2023 &ndash; Apr 2024</span>
+    <!-- Projects & Research -->
+    <section id="projects">
+      <div class="section-header">
+        <h2 class="section-title">Projects &amp; Research</h2>
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="research">6G &amp; Research</button>
+          <button class="filter-btn" data-filter="simulation">Networks &amp; Simulation</button>
+          <button class="filter-btn" data-filter="dsp">Signal Processing</button>
+          <button class="filter-btn" data-filter="hardware">Embedded &amp; VLSI</button>
+        </div>
       </div>
-      <div class="meta">Banglalink Digital Communications Ltd</div>
-      <ul>
-        <li>Performed Level-1 maintenance including RET configuration, BTS software upgrades, and alarm logic changes.</li>
-        <li>Monitored, prioritized, and diagnosed faults across RAN network elements by severity.</li>
-        <li>Tracked KPIs and performed root cause analysis for Site/Cell downs and network-wide KPI fluctuations.</li>
-        <li>Coordinated with internal and external teams on work orders, planned maintenance, and emergency activities.</li>
-      </ul>
-    </div>
-  </section>
 
-  <section id="projects">
-    <h2>Projects &amp; Research</h2>
+      <div class="projects-grid">
+        <article class="project-card" data-category="dsp">
+          <div>
+            <div class="project-meta">
+              <span class="project-type">Signal Processing</span>
+              <span class="project-year">Apr &ndash; May 2026</span>
+            </div>
+            <h3>Adaptive Noise Cancellation of Speech Using LMS and NLMS Algorithms</h3>
+            <ul>
+              <li>Applied LMS and NLMS adaptive filters to remove additive noise from speech, using a reference noise signal fed to an adaptive FIR filter.</li>
+              <li>NLMS outperformed LMS on noise suppression: maximum output SNR of 17.58 dB versus 15.05 dB.</li>
+              <li>Decorrelation delay had the largest effect on performance, followed by step size, with filter length mattering least.</li>
+            </ul>
+          </div>
+          <div class="pill-wrap"><span class="pill">Python</span><span class="pill">Signal Processing</span><span class="pill">LMS / NLMS</span></div>
+        </article>
 
-    <div class="card">
-      <div class="card-header">
-        <h3>Security and Privacy in Emerging 6G Networks</h3>
-        <span class="date">2026</span>
+        <article class="project-card" data-category="research">
+          <div>
+            <div class="project-meta">
+              <span class="project-type">6G / Open RAN Research</span>
+              <span class="project-year">Apr &ndash; May 2026</span>
+            </div>
+            <h3>Security and Privacy in Emerging 6G Networks: A Survey of AI-Driven Solutions for Open RAN</h3>
+            <p>Surveyed AI-driven security and privacy research for 6G Open RAN, covering adversarial attack mitigation, zero-trust architectures, privacy-preserving federated learning, interface security, misconfiguration detection and explainable anomaly detection. Compared the approaches, their evaluations and limitations, and identified open research gaps.</p>
+          </div>
+          <div class="pill-wrap"><span class="pill">6G</span><span class="pill">Open RAN</span><span class="pill">AI Security</span><span class="pill">Zero Trust</span></div>
+        </article>
+
+        <article class="project-card" data-category="simulation">
+          <div>
+            <div class="project-meta">
+              <span class="project-type">Network Design</span>
+              <span class="project-year">Sep &ndash; Dec 2025</span>
+            </div>
+            <h3>Content Delivery Network Design and Implementation</h3>
+            <ul>
+              <li>Designed a CDN architecture that uses HTTP/2 multiplexed streams to make content transfer more efficient.</li>
+              <li>A centralized controller applies load-balancing algorithms to route user requests across replica servers placed near end users, aiming to reduce delivery latency and congestion.</li>
+            </ul>
+          </div>
+          <div class="pill-wrap"><span class="pill">CDN</span><span class="pill">HTTP/2</span><span class="pill">Load Balancing</span></div>
+        </article>
+
+        <article class="project-card" data-category="hardware">
+          <div>
+            <div class="project-meta">
+              <span class="project-type">Embedded Systems</span>
+              <span class="project-year">Oct &ndash; Dec 2025</span>
+            </div>
+            <h3>Smart Home Automation System on a Cortex-M4 STM32 Microcontroller</h3>
+            <ul>
+              <li>Built a home-safety monitor on an ARM Cortex-M4 STM32 with temperature, light, PIR motion and gas sensors.</li>
+              <li>Readings that cross a threshold trigger push notifications to the ntfy mobile app.</li>
+            </ul>
+          </div>
+          <div class="pill-wrap"><span class="pill">STM32</span><span class="pill">Cortex-M4</span><span class="pill">Sensors</span><span class="pill">ESP32</span></div>
+        </article>
+
+        <article class="project-card" data-category="simulation">
+          <div>
+            <div class="project-meta">
+              <span class="project-type">Network Simulation</span>
+              <span class="project-year">Feb &ndash; Apr 2025</span>
+            </div>
+            <h3>Wireless Multi-Hop Network Design &amp; Simulation (QualNet 8.2)</h3>
+            <ul>
+              <li>Benchmarked TCP vs. UDP performance across four routed subnetworks measuring throughput, end-to-end delay, retransmissions, and MAC overhead.</li>
+              <li>Quantified the impact of Rayleigh fading on latency and throughput across concurrent UDP traffic flows.</li>
+            </ul>
+          </div>
+          <div class="pill-wrap"><span class="pill">QualNet 8.2</span><span class="pill">TCP/UDP</span><span class="pill">Rayleigh Fading</span></div>
+        </article>
+
+        <article class="project-card" data-category="hardware">
+          <div>
+            <div class="project-meta">
+              <span class="project-type">VLSI Design</span>
+              <span class="project-year">Oct &ndash; Dec 2024</span>
+            </div>
+            <h3>Bi-directional SISO Shift Register Using D Flip-Flops</h3>
+            <ul>
+              <li>Designed a 4-bit bi-directional shift register with synchronous reset in Cadence Virtuoso, driving an off-chip load of 50 &Omega; in parallel with 10 pF.</li>
+              <li>Split the 1 mm output wire into three buffered sections to cut delay and signal degradation.</li>
+              <li>Simulated power at 25 MHz, clock-to-Q delay, setup and hold time, and compared post-layout (PEX) results with the schematic.</li>
+            </ul>
+          </div>
+          <div class="pill-wrap"><span class="pill">Cadence Virtuoso</span><span class="pill">VLSI</span><span class="pill">Post-layout PEX</span></div>
+        </article>
+
+        <article class="project-card" data-category="research">
+          <div>
+            <div class="project-meta">
+              <span class="project-type">Telecom Infrastructure Research</span>
+              <span class="project-year">2021 &ndash; 2022</span>
+            </div>
+            <h3>Last Mile Solution for High-Speed Communication Systems</h3>
+            <p>
+              Assessed last-mile broadband connectivity bottlenecks in Bangladesh and proposed scalable access technologies alongside regulatory policy recommendations.
+            </p>
+          </div>
+          <div class="pill-wrap">
+            <span class="pill">Last-Mile Access</span>
+            <span class="pill">Telecom Policy</span>
+            <span class="pill">Broadband</span>
+          </div>
+        </article>
       </div>
-      <p>Evaluated AI-driven 6G Open RAN security and privacy solutions, methodologies, and open research gaps.</p>
-    </div>
+    </section>
 
-    <div class="card">
-      <div class="card-header">
-        <h3>Wireless Multi-Hop Network Design and Simulation (QualNet 8.2)</h3>
-        <span class="date">2025</span>
+    <!-- Education -->
+    <section id="education">
+      <div class="section-header">
+        <h2 class="section-title">Education</h2>
       </div>
-      <ul>
-        <li>Benchmarked TCP vs. UDP across routed subnets evaluating throughput, delay, retransmissions, and MAC overhead.</li>
-        <li>Measured the impact of Rayleigh fading on delay and throughput across concurrent UDP flows.</li>
-      </ul>
-    </div>
 
-    <div class="card">
-      <div class="card-header">
-        <h3>Last Mile Solution for High-Speed Communication Systems</h3>
-        <span class="date">2021 &ndash; 2022</span>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="item-top">
+            <div class="item-title">Master of Engineering (MEng), Electrical and Computer Engineering</div>
+            <span class="item-date">Sep 2024 &ndash; Dec 2026</span>
+          </div>
+          <div class="item-org">Concordia University &bull; Montreal, QC, Canada</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="item-top">
+            <div class="item-title">Bachelor of Science (BSc), Electrical and Electronics Engineering</div>
+            <span class="item-date">2017 &ndash; 2022</span>
+          </div>
+          <div class="item-org">Ahsanullah University of Science and Technology</div>
+        </div>
       </div>
-      <div class="meta">Research Experience &bull; Bangladesh</div>
-      <p>Assessed last-mile connectivity challenges and proposed suitable communication technologies and policy measures.</p>
-    </div>
-  </section>
+    </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <div class="card">
-      <div class="card-header">
-        <h3>MEng, Electrical and Computer Engineering</h3>
-        <span class="date">Sep 2024 &ndash; Dec 2026</span>
+    <!-- Certifications -->
+    <section id="certifications">
+      <div class="section-header">
+        <h2 class="section-title">Certifications</h2>
       </div>
-      <div class="meta">Concordia University &bull; Montreal, QC, Canada</div>
-    </div>
-  </section>
 
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <ul class="cert-list">
-      <li>
-        <span><strong>Graduate Leadership Program</strong> — GradProSkills (Concordia University)</span>
-        <span class="date">Sep 2024</span>
-      </li>
-      <li>
-        <span><strong>Business Analytics with Excel: Elementary to Advanced</strong> — Johns Hopkins University</span>
-        <span class="date">May 2024</span>
-      </li>
-      <li>
-        <span><strong>Crash Course on Python</strong> — Google</span>
-        <span class="date">May 2023</span>
-      </li>
-    </ul>
-  </section>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-title">Graduate Leadership Program</div>
+          <div class="cert-footer"><span>GradProSkills</span><span>Sep 2024</span></div>
+          <div class="cert-footer"><span class="cert-id">Concordia University</span><a class="cert-link" href="https://app-ca.clickdimensions.com/blob/concordiaca-a8jj7/files/md.rummansarkar_gpld147.pdf" target="_blank" rel="noopener">View credential</a></div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-title">Business Analytics with Excel: Elementary to Advanced</div>
+          <div class="cert-footer"><span>Johns Hopkins University</span><span>May 2024</span></div>
+          <div class="cert-footer"><span class="cert-id">ID DEABBQZ7LFRT</span><a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/DEABBQZ7LFRT" target="_blank" rel="noopener">View credential</a></div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-title">Crash Course on Python</div>
+          <div class="cert-footer"><span>Google</span><span>May 2023</span></div>
+          <div class="cert-footer"><span class="cert-id">ID C5SQAMLHJ6LT</span><a class="cert-link" href="https://www.coursera.org/account/accomplishments/certificate/C5SQAMLHJ6LT" target="_blank" rel="noopener">View credential</a></div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-title">Electric Industry Operations and Markets</div>
+          <div class="cert-footer"><span>Coursera</span><span>Dec 2022</span></div>
+          <div class="cert-footer"><span class="cert-id">ID PBQ336K2T3WW</span><a class="cert-link" href="https://www.coursera.org/account/accomplishments/certificate/PBQ336K2T3WW" target="_blank" rel="noopener">View credential</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Random Motivating Quote at Bottom -->
+  <aside class="quote-section" aria-label="Daily motivation">
+    <div class="quote-box">
+      <div class="quote-top">
+        <span class="quote-tag">// Signal for the Day</span>
+        <button class="quote-refresh" id="newQuoteBtn" type="button" title="Load another quote">↻ New Quote</button>
+      </div>
+      <blockquote class="quote-text" id="quoteText"></blockquote>
+      <div class="quote-author" id="quoteAuthor"></div>
+    </div>
+  </aside>
 
   <footer>
-    &copy; 2026 Md Rumman Huda Sarkar &bull; Montreal, QC, Canada
+    <div class="footer-links">
+      <a href="mailto:rumman3476@gmail.com">rumman3476@gmail.com</a>
+      <a href="https://github.com/rummanhuda" target="_blank">github.com/rummanhuda</a>
+      <a href="https://www.linkedin.com/in/rummanhuda/" target="_blank">LinkedIn</a>
+      <a href="https://www.instagram.com/rumman_huda/" target="_blank">Instagram</a>
+    </div>
+    <p>&copy; 2026 Md Rumman Huda Sarkar &bull; Montreal, Quebec, Canada</p>
   </footer>
 
+  <script>
+  (() => {
+    const root = document.documentElement;
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const $ = (s, c = document) => c.querySelector(s);
+    const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+
+    /* ---------- Live handover demo (hero canvas) ---------- */
+    const hero = $('.hero'), cv = $('#mesh'), ctx = cv.getContext('2d');
+    const hud = { cell: $('#hudCell'), sig: $('#hudSig'), ho: $('#hudHo') };
+    let W = 0, H = 0, nodes = [], ue = { x: 0, y: 0 }, ptr = null, ptrUntil = 0;
+    let serving = -1, handovers = 0, running = true, col = { a: '#3dd1ff', b: '#7c8cff', m: '#74829a' };
+
+    const readColors = () => {
+      const s = getComputedStyle(root);
+      col = {
+        a: s.getPropertyValue('--accent').trim(),
+        b: s.getPropertyValue('--accent-2').trim(),
+        m: s.getPropertyValue('--text-muted').trim()
+      };
+    };
+
+    function layout() {
+      const d = Math.min(window.devicePixelRatio || 1, 2);
+      W = hero.clientWidth; H = hero.clientHeight;
+      cv.width = W * d; cv.height = H * d; ctx.setTransform(d, 0, 0, d, 0, 0);
+      let s = 7; const rnd = () => (s = (s * 16807) % 2147483647) / 2147483647;
+      const cols = Math.max(3, Math.round(W / 170)), rows = Math.max(3, Math.round(H / 170));
+      nodes = [];
+      for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++)
+        nodes.push({ x: (c + 0.2 + 0.6 * rnd()) * W / cols, y: (r + 0.2 + 0.6 * rnd()) * H / rows, p: rnd(), d: 0 });
+      if (!ue.x) { ue.x = W * 0.7; ue.y = H * 0.45; }
+      serving = -1;
+    }
+
+    function step(t) {
+      const live = ptr && t < ptrUntil;
+      const tx = live ? ptr.x : W * (0.5 + 0.38 * Math.sin(t * 0.00023 + 1));
+      const ty = live ? ptr.y : H * (0.5 + 0.3 * Math.sin(t * 0.00031));
+      ue.x += (tx - ue.x) * 0.07; ue.y += (ty - ue.y) * 0.07;
+    }
+
+    function measure() {
+      let best = 0, second = 0, bd = 1e9, sd = 1e9;
+      nodes.forEach((n, i) => {
+        n.d = Math.hypot(n.x - ue.x, n.y - ue.y);
+        if (n.d < bd) { sd = bd; second = best; bd = n.d; best = i; }
+        else if (n.d < sd) { sd = n.d; second = i; }
+      });
+      if (serving < 0) serving = best;
+      else if (best !== serving && nodes[serving].d - bd > 24) { serving = best; handovers++; }
+      return best === serving ? second : best;
+    }
+
+    function draw(t) {
+      if (!nodes.length) return;
+      const nb = measure(), s = nodes[serving];
+      ctx.clearRect(0, 0, W, H); ctx.lineWidth = 1;
+      for (let i = 0; i < nodes.length; i++) for (let j = i + 1; j < nodes.length; j++) {
+        const a = nodes[i], b = nodes[j], d = Math.hypot(a.x - b.x, a.y - b.y);
+        if (d < 230) { ctx.globalAlpha = 0.16 * (1 - d / 230); ctx.strokeStyle = col.b; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
+      }
+      nodes.forEach((n, i) => {
+        const k = (t * 0.00025 + n.p) % 1;
+        ctx.globalAlpha = (1 - k) * 0.22; ctx.strokeStyle = col.a;
+        ctx.beginPath(); ctx.arc(n.x, n.y, k * 110, 0, 6.2832); ctx.stroke();
+        ctx.globalAlpha = i === serving ? 1 : 0.7; ctx.fillStyle = i === serving ? col.a : col.m;
+        ctx.beginPath(); ctx.arc(n.x, n.y, i === serving ? 4 : 2.5, 0, 6.2832); ctx.fill();
+      });
+      ctx.setLineDash([4, 6]); ctx.globalAlpha = 0.45; ctx.strokeStyle = col.b;
+      ctx.beginPath(); ctx.moveTo(ue.x, ue.y); ctx.lineTo(nodes[nb].x, nodes[nb].y); ctx.stroke();
+      ctx.setLineDash([]); ctx.globalAlpha = 0.9; ctx.strokeStyle = col.a; ctx.lineWidth = 1.5;
+      ctx.beginPath(); ctx.moveTo(ue.x, ue.y); ctx.lineTo(s.x, s.y); ctx.stroke();
+      ctx.globalAlpha = 1; ctx.fillStyle = col.a; ctx.beginPath(); ctx.arc(ue.x, ue.y, 4.5, 0, 6.2832); ctx.fill();
+      ctx.globalAlpha = 0.35; ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(ue.x, ue.y, 11, 0, 6.2832); ctx.stroke();
+      ctx.globalAlpha = 1;
+      hud.cell.textContent = 'BTS-' + String(serving + 1).padStart(2, '0');
+      hud.sig.textContent = Math.round(-62 - 24 * Math.log10(1 + s.d / 14)) + ' dBm';
+      hud.ho.textContent = handovers;
+    }
+
+    const loop = t => { if (running) { step(t); draw(t); } requestAnimationFrame(loop); };
+    hero.addEventListener('pointermove', e => {
+      const r = hero.getBoundingClientRect();
+      ptr = { x: e.clientX - r.left, y: e.clientY - r.top }; ptrUntil = performance.now() + 2500;
+    });
+    new IntersectionObserver(([e]) => { running = e.isIntersecting; }).observe(hero);
+    new ResizeObserver(() => { layout(); draw(performance.now()); }).observe(hero);
+
+    /* ---------- Dark / Light Theme Toggle ---------- */
+    const themeToggle = $('#themeToggle');
+    const themeIcon = $('#themeIcon');
+    const themeLabel = $('#themeLabel');
+
+    function applyTheme(t) {
+      const mode = (t === 'light' || t === 'daylight') ? 'light' : 'dark';
+      root.setAttribute('data-theme', mode);
+      try { localStorage.setItem('portfolio-theme', mode); } catch (e) {}
+      if (mode === 'light') {
+        themeIcon.textContent = '🌙';
+        themeLabel.textContent = 'Dark';
+      } else {
+        themeIcon.textContent = '☀️';
+        themeLabel.textContent = 'Light';
+      }
+      readColors();
+      draw(performance.now());
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+    });
+
+    let saved = null;
+    try { saved = localStorage.getItem('portfolio-theme'); } catch (e) {}
+    layout();
+    applyTheme(saved || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
+    if (!reduce) requestAnimationFrame(loop);
+
+    /* ---------- Copy email ---------- */
+    const copyBtn = $('#copyEmailBtn'), copyText = $('#copyEmailText');
+    copyBtn.addEventListener('click', () => {
+      const email = copyBtn.getAttribute('data-email');
+      navigator.clipboard.writeText(email).then(() => {
+        copyText.textContent = 'Copied!';
+        setTimeout(() => { copyText.textContent = email; }, 2000);
+      }).catch(() => { location.href = 'mailto:' + email; });
+    });
+
+    /* ---------- Project filter ---------- */
+    const filterBtns = $$('.filter-btn'), cards = $$('.project-card');
+    filterBtns.forEach(btn => btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active')); btn.classList.add('active');
+      const f = btn.dataset.filter;
+      cards.forEach(c => c.classList.toggle('hidden', f !== 'all' && c.dataset.category !== f));
+    }));
+
+    /* ---------- Random Motivating Quote ---------- */
+    const quotes = [
+      { q: "The best way to predict the future is to invent it.", a: "Alan Kay" },
+      { q: "Success is the sum of small efforts, repeated day in and day out.", a: "Robert Collier" },
+      { q: "Quality is not an act, it is a habit.", a: "Aristotle" },
+      { q: "Simplicity is the ultimate sophistication.", a: "Leonardo da Vinci" },
+      { q: "Scientists study the world as it is; engineers create the world that has never been.", a: "Theodore von Karman" },
+      { q: "Persistence guarantees that results are inevitable.", a: "Paramahansa Yogananda" },
+      { q: "Do not wait to strike till the iron is hot; but make it hot by striking.", a: "William Butler Yeats" },
+      { q: "Strive for perfection in everything you do. Take the best that exists and make it better.", a: "Sir Henry Royce" },
+      { q: "Hard work beats talent when talent doesn't work hard.", a: "Tim Notke" },
+      { q: "The fundamental problem of communication is that of reproducing at one point either exactly or approximately a message selected at another point.", a: "Claude Shannon" },
+      { q: "What we achieve inwardly will change outer reality.", a: "Plutarch" },
+      { q: "It always seems impossible until it's done.", a: "Nelson Mandela" },
+      { q: "Discipline is choosing between what you want now and what you want most.", a: "Abraham Lincoln" },
+      { q: "Focus on the signal, filter out the noise.", a: "Engineering Maxim" },
+      { q: "Great things are not done by impulse, but by a series of small things brought together.", a: "Vincent van Gogh" }
+    ];
+
+    const quoteText = $('#quoteText');
+    const quoteAuthor = $('#quoteAuthor');
+    const newQuoteBtn = $('#newQuoteBtn');
+    let lastIdx = -1;
+
+    function pickRandomQuote() {
+      let idx = Math.floor(Math.random() * quotes.length);
+      if (quotes.length > 1 && idx === lastIdx) {
+        idx = (idx + 1 + Math.floor(Math.random() * (quotes.length - 1))) % quotes.length;
+      }
+      lastIdx = idx;
+      quoteText.textContent = `"${quotes[idx].q}"`;
+      quoteAuthor.textContent = `— ${quotes[idx].a}`;
+    }
+
+    pickRandomQuote();
+    newQuoteBtn.addEventListener('click', pickRandomQuote);
+
+    /* ---------- Scroll progress and active nav link ---------- */
+    const bar = $('#progress');
+    const onScroll = () => { const h = root.scrollHeight - innerHeight; bar.style.transform = 'scaleX(' + (h > 0 ? scrollY / h : 0) + ')'; };
+    addEventListener('scroll', onScroll, { passive: true }); onScroll();
+    const links = $$('.nav-links a');
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+    }), { rootMargin: '-40% 0px -55% 0px' });
+    $$('main section').forEach(s => io.observe(s));
+  })();
+  </script>
 </body>
 </html>
