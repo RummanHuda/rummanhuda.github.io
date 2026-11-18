@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Portfolio</title>
+  <style>
+    :root {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --text: #18181b;
+      --muted: #52525b;
+      --border: #e4e4e7;
+      --accent: #0f172a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; }
+    .subtitle { color: var(--muted); font-size: 1.05rem; margin-top: 0.35rem; }
+    .links { margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 1rem; }
+    .links a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.4rem 0.85rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--surface);
+      transition: border-color 0.2s;
+    }
+    .links a:hover { border-color: var(--text); }
+    .links a.primary {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+    }
+    section { margin-bottom: 2.75rem; }
+    h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tag {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.88rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.4rem;
+    }
+    .card h3 { font-size: 1.05rem; font-weight: 600; }
+    .card span { font-size: 0.85rem; color: var(--muted); }
+    .card p { font-size: 0.95rem; color: var(--muted); }
+    .card a {
+      display: inline-block;
+      margin-top: 0.65rem;
+      font-size: 0.88rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+    ul.cert-list { list-style: none; }
+    ul.cert-list li {
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.95rem;
+    }
+    ul.cert-list li:last-child { border-bottom: none; }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Your Full Name</h1>
+    <p class="subtitle">Your Role / Specialization &bull; City, Country</p>
+    <p style="margin-top: 0.85rem; color: var(--muted); font-size: 0.95rem;">
+      A concise 2-sentence summary of who you are, what problems you solve, and what opportunities you are looking for.
+    </p>
+    <div class="links">
+      <a href="resume.pdf" target="_blank" class="primary">Download CV (PDF)</a>
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+      <a href="mailto:you@example.com">Email</a>
+    </div>
+  </header>
+
+  <section id="expertise">
+    <h2>Areas of Expertise</h2>
+    <div class="tags">
+      <span class="tag">Skill / Domain 1</span>
+      <span class="tag">Skill / Domain 2</span>
+      <span class="tag">Programming Language</span>
+      <span class="tag">Tools &amp; Frameworks</span>
+      <span class="tag">System Architecture</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Selected Projects</h2>
+    <div class="card">
+      <div class="card-header">
+        <h3>Project Title One</h3>
+        <span>2026</span>
+      </div>
+      <p>Brief description of the problem, the tools/technologies used, and the measurable outcome.</p>
+      <a href="https://github.com/yourusername/project-one" target="_blank">View Repository &rarr;</a>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h3>Project Title Two</h3>
+        <span>2025</span>
+      </div>
+      <p>Brief description of what you built and the key technical takeaway.</p>
+      <a href="https://github.com/yourusername/project-two" target="_blank">View Repository &rarr;</a>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul class="cert-list">
+      <li>
+        <span><strong>Certification Name</strong> — Issuing Organization</span>
+        <span style="color: var(--muted);">Year</span>
+      </li>
+      <li>
+        <span><strong>Second Certification Name</strong> — Issuing Organization</span>
+        <span style="color: var(--muted);">Year</span>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2026 Your Full Name. Built and hosted for free with GitHub Pages.
+  </footer>
+
+</body>
+</html>
