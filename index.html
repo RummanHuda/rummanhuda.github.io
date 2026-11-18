@@ -125,7 +125,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 1.5rem;
+      gap: 1.35rem;
       min-width: 0;
     }
     .nav-links a {
@@ -286,6 +286,7 @@
     .timeline-item,
     .project-card,
     .cert-card,
+    .social-card,
     .quote-box {
       position: relative;
       background: var(--bg-card);
@@ -297,6 +298,7 @@
     .bento-card::after,
     .project-card::after,
     .cert-card::after,
+    .social-card::after,
     .quote-box::after {
       content: "";
       position: absolute;
@@ -311,6 +313,7 @@
     .bento-card:hover,
     .project-card:hover,
     .cert-card:hover,
+    .social-card:hover,
     .timeline-item:hover,
     .quote-box:hover {
       border-color: var(--border-hover);
@@ -318,6 +321,7 @@
     .bento-card:hover::after,
     .project-card:hover::after,
     .cert-card:hover::after,
+    .social-card:hover::after,
     .quote-box:hover::after {
       opacity: 1;
     }
@@ -429,6 +433,69 @@
     .cert-link { color: var(--accent); text-decoration: none; font-weight: 500; }
     .cert-link:hover { text-decoration: underline; }
 
+    /* Socials Grid */
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+    .social-card {
+      padding: 1.25rem 1.35rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      text-decoration: none;
+    }
+    .social-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+    .social-left {
+      display: flex;
+      align-items: center;
+      gap: 0.95rem;
+      min-width: 0;
+    }
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--badge-bg);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: none;
+    }
+    .social-info {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+    .social-name {
+      font: 600 0.98rem var(--display);
+      color: var(--text);
+    }
+    .social-handle {
+      font: 400 0.8rem var(--mono);
+      color: var(--text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .social-arrow {
+      color: var(--text-muted);
+      font-family: var(--mono);
+      font-size: 0.95rem;
+      transition: transform 0.2s, color 0.2s;
+    }
+    .social-card:hover .social-arrow {
+      color: var(--accent);
+      transform: translate(2px, -2px);
+    }
+
     /* Motivating Quote Section */
     .quote-section {
       max-width: 1040px;
@@ -517,6 +584,7 @@
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
         <a href="#certifications">Certifications</a>
+        <a href="#socials">Socials</a>
       </div>
       <button class="theme-btn" id="themeToggle" aria-label="Toggle dark and light theme">
         <span id="themeIcon">☀️</span>
@@ -851,6 +919,54 @@
         </div>
       </div>
     </section>
+
+    <!-- Socials -->
+    <section id="socials">
+      <div class="section-header">
+        <h2 class="section-title">Socials</h2>
+      </div>
+
+      <div class="social-grid">
+        <a class="social-card" href="https://www.facebook.com/rusho.rumman" target="_blank" rel="noopener noreferrer">
+          <div class="social-left">
+            <div class="social-icon" aria-hidden="true">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </div>
+            <div class="social-info">
+              <span class="social-name">Facebook</span>
+              <span class="social-handle">/rusho.rumman</span>
+            </div>
+          </div>
+          <span class="social-arrow" aria-hidden="true">&nearr;</span>
+        </a>
+
+        <a class="social-card" href="https://www.instagram.com/rumman_huda/" target="_blank" rel="noopener noreferrer">
+          <div class="social-left">
+            <div class="social-icon" aria-hidden="true">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </div>
+            <div class="social-info">
+              <span class="social-name">Instagram</span>
+              <span class="social-handle">@rumman_huda</span>
+            </div>
+          </div>
+          <span class="social-arrow" aria-hidden="true">&nearr;</span>
+        </a>
+
+        <a class="social-card" href="https://www.youtube.com/@rumman_huda" target="_blank" rel="noopener noreferrer">
+          <div class="social-left">
+            <div class="social-icon" aria-hidden="true">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </div>
+            <div class="social-info">
+              <span class="social-name">YouTube</span>
+              <span class="social-handle">@rumman_huda</span>
+            </div>
+          </div>
+          <span class="social-arrow" aria-hidden="true">&nearr;</span>
+        </a>
+      </div>
+    </section>
   </main>
 
   <!-- Random Motivating Quote at Bottom -->
@@ -870,7 +986,9 @@
       <a href="mailto:rumman3476@gmail.com">rumman3476@gmail.com</a>
       <a href="https://github.com/rummanhuda" target="_blank">github.com/rummanhuda</a>
       <a href="https://www.linkedin.com/in/rummanhuda/" target="_blank">LinkedIn</a>
+      <a href="https://www.facebook.com/rusho.rumman" target="_blank">Facebook</a>
       <a href="https://www.instagram.com/rumman_huda/" target="_blank">Instagram</a>
+      <a href="https://www.youtube.com/@rumman_huda" target="_blank">YouTube</a>
     </div>
     <p>&copy; 2026 Md Rumman Huda Sarkar &bull; Montreal, Quebec, Canada</p>
   </footer>
