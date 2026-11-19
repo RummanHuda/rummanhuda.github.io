@@ -199,7 +199,7 @@
       margin: 0 auto;
       padding: 4.25rem 1.5rem 2.75rem;
       display: grid;
-      grid-template-columns: 1.35fr 0.95fr;
+      grid-template-columns: 1.15fr 1.05fr;
       gap: 2.25rem;
       align-items: center;
     }
@@ -266,6 +266,34 @@
     .btn-primary:hover {
       color: var(--on-accent);
       filter: brightness(1.06);
+    }
+    .icon-btn {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      justify-content: center;
+      position: relative;
+    }
+    .copy-toast {
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%) translateY(4px);
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-hover);
+      color: var(--accent);
+      font: 500 0.72rem var(--mono);
+      padding: 0.25rem 0.55rem;
+      border-radius: 6px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s, transform 0.2s;
+      box-shadow: var(--shadow);
+    }
+    .copy-toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
     }
 
     /* Right Hero Telemetry & Quick Stats Deck */
@@ -352,15 +380,17 @@
 
     .kpi-strip {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.75rem;
+      grid-template-columns: repeat(3, minmax(175px, 1fr));
+      gap: 0.85rem;
+      width: 100%;
+      max-width: 640px;
     }
     .kpi-box {
       background: var(--bg-card);
       backdrop-filter: blur(10px);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 0.95rem 1rem;
+      padding: 1.05rem 1.15rem;
       transition: border-color 0.2s, transform 0.2s;
     }
     .kpi-box:hover {
@@ -368,14 +398,15 @@
       transform: translateY(-2px);
     }
     .kpi-num {
-      font: 700 1.35rem var(--display);
+      font: 700 1.38rem var(--display);
       color: var(--text);
     }
     .kpi-num span { color: var(--accent); }
     .kpi-desc {
-      font-size: 0.76rem;
+      font-size: 0.78rem;
+      line-height: 1.38;
       color: var(--text-secondary);
-      margin-top: 0.15rem;
+      margin-top: 0.25rem;
     }
 
     /* Main Container */
@@ -1088,15 +1119,12 @@
       <div class="nav-links">
         <a href="#expertise">Expertise</a>
         <a href="#experience">Experience &amp; Education</a>
-        <a href="#projects">Projects</a>
+        <a href="#projects">Research &amp; Projects</a>
         <a href="#certifications">Certifications</a>
         <a href="#sandbox">Sandbox</a>
         <a href="#socials">Socials</a>
       </div>
       <div class="nav-controls">
-        <button class="theme-btn" id="deployGuideBtn" title="How to link your PDFs on GitHub Pages">
-          <span>📂 PDF Setup</span>
-        </button>
         <button class="theme-btn" id="themeToggle" aria-label="Toggle dark and light theme">
           <span id="themeIcon">☀️</span>
           <span id="themeLabel">Light</span>
@@ -1124,13 +1152,16 @@
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             Download CV (PDF)
           </a>
-          <button class="btn" id="copyEmailBtn" data-email="rumman3476@gmail.com">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            <span id="copyEmailText">rumman3476@gmail.com</span>
+          <button class="btn icon-btn" id="copyEmailBtn" data-email="rumman3476@gmail.com" aria-label="Copy email address (rumman3476@gmail.com)" title="Copy Email: rumman3476@gmail.com">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span class="copy-toast" id="copyToast">Copied!</span>
           </button>
-          <a href="https://github.com/rummanhuda" target="_blank" class="btn">GitHub</a>
-          <a href="https://www.linkedin.com/in/rummanhuda/" target="_blank" class="btn">LinkedIn</a>
-          <a href="tel:+14384026789" class="btn">+1 438 402 6789</a>
+          <a href="https://github.com/rummanhuda" target="_blank" rel="noopener noreferrer" class="btn icon-btn" aria-label="GitHub Profile" title="GitHub">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 2.9-.39c.98 0 1.97.13 2.9.39 2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/rummanhuda/" target="_blank" rel="noopener noreferrer" class="btn icon-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"/></svg>
+          </a>
         </div>
       </div>
 
@@ -1170,7 +1201,7 @@
           </div>
           <div class="kpi-box">
             <div class="kpi-num">7<span>+</span></div>
-            <div class="kpi-desc">Research &amp; Hardware Papers</div>
+            <div class="kpi-desc">Research &amp; Hardware Reports</div>
           </div>
           <div class="kpi-box">
             <div class="kpi-num">MEng</div>
@@ -1270,13 +1301,13 @@
 
       <div class="career-layout">
         <div class="role-selector" role="tablist">
-          <button class="role-tab active" data-role="qualcomm" data-career-type="work">
-            <span class="role-tab-title">Brand Advocate (Qualcomm)</span>
-            <span class="role-tab-sub">Jul 2024 &ndash; Present &bull; Canada</span>
-          </button>
-          <button class="role-tab" data-role="banglalink" data-career-type="work">
+          <button class="role-tab active" data-role="banglalink" data-career-type="work">
             <span class="role-tab-title">RAN &amp; Telecom Engineer</span>
             <span class="role-tab-sub">Jan 2023 &ndash; Apr 2024 &bull; Banglalink</span>
+          </button>
+          <button class="role-tab" data-role="qualcomm" data-career-type="work">
+            <span class="role-tab-title">Brand Advocate (Qualcomm)</span>
+            <span class="role-tab-sub">Jul 2024 &ndash; Present &bull; Canada</span>
           </button>
           <button class="role-tab" data-role="concordia" data-career-type="education">
             <span class="role-tab-title">MEng, Electrical &amp; Computer Eng.</span>
@@ -1288,29 +1319,8 @@
           </button>
         </div>
 
-        <!-- Role 1 -->
-        <div class="surface role-detail active" id="role-qualcomm">
-          <div class="role-detail-head">
-            <div>
-              <div class="role-detail-title">Brand Advocate (Qualcomm)</div>
-              <div class="role-detail-org">Channel Partners Solutions LLC &bull; Montreal, Canada</div>
-            </div>
-            <span class="role-badge">July 2024 &ndash; Ongoing</span>
-          </div>
-          <div class="impact-cards">
-            <div class="impact-item">
-              <strong>Technical Advisory</strong>
-              Advised retail partners and end-users on Snapdragon SoC architecture, connectivity capabilities, and on-device AI features.
-            </div>
-            <div class="impact-item">
-              <strong>Live Product Demos</strong>
-              Executed interactive hardware demonstrations and reported structured field feedback to channel operations.
-            </div>
-          </div>
-        </div>
-
-        <!-- Role 2 -->
-        <div class="surface role-detail" id="role-banglalink">
+        <!-- Role 1 (Primary): RAN & Telecom Engineer -->
+        <div class="surface role-detail active" id="role-banglalink">
           <div class="role-detail-head">
             <div>
               <div class="role-detail-title">RAN &amp; Telecom Engineer</div>
@@ -1337,6 +1347,27 @@
             <span class="pill" data-skill="RET Configuration">RET Configuration</span>
             <span class="pill" data-skill="Root Cause Analysis (RCA)">Root Cause Analysis</span>
             <span class="pill" data-skill="Alarm &amp; KPI Analysis">Alarm &amp; KPI Analysis</span>
+          </div>
+        </div>
+
+        <!-- Role 2: Brand Advocate (Qualcomm) -->
+        <div class="surface role-detail" id="role-qualcomm">
+          <div class="role-detail-head">
+            <div>
+              <div class="role-detail-title">Brand Advocate (Qualcomm)</div>
+              <div class="role-detail-org">Channel Partners Solutions LLC &bull; Montreal, Canada</div>
+            </div>
+            <span class="role-badge">July 2024 &ndash; Ongoing</span>
+          </div>
+          <div class="impact-cards">
+            <div class="impact-item">
+              <strong>Technical Advisory</strong>
+              Advised retail partners and end-users on Snapdragon SoC architecture, connectivity capabilities, and on-device AI features.
+            </div>
+            <div class="impact-item">
+              <strong>Live Product Demos</strong>
+              Executed interactive hardware demonstrations and reported structured field feedback to channel operations.
+            </div>
           </div>
         </div>
 
@@ -1384,12 +1415,12 @@
       </div>
     </section>
 
-    <!-- Section 3: Projects & Research Reports -->
+    <!-- Section 3: Research and Projects -->
     <section id="projects">
       <div class="section-header">
         <div class="section-title-group">
-          <span class="section-kicker">// Click any project title or button to open its full report</span>
-          <h2 class="section-title">Projects &amp; Research Papers</h2>
+          <span class="section-kicker">// Click any title or button to open its full report</span>
+          <h2 class="section-title">Research and Projects</h2>
         </div>
         <div class="filter-bar">
           <button class="filter-btn active" data-filter="all">All (7)</button>
@@ -1638,8 +1669,8 @@
       <div class="cert-grid">
         <div class="surface cert-card">
           <div class="cert-title">Graduate Leadership Program</div>
-          <div class="cert-footer"><span>GradProSkills &bull; Concordia</span><span>Sep 2024</span></div>
-          <div class="cert-footer"><span class="cert-id">Concordia University</span><a class="cert-link" href="https://app-ca.clickdimensions.com/blob/concordiaca-a8jj7/files/md.rummansarkar_gpld147.pdf" target="_blank" rel="noopener">View credential &nearr;</a></div>
+          <div class="cert-footer"><span>Concordia University</span><span>Sep 2024</span></div>
+          <div class="cert-footer"><span class="cert-id">GradProSkills</span><a class="cert-link" href="https://app-ca.clickdimensions.com/blob/concordiaca-a8jj7/files/md.rummansarkar_gpld147.pdf" target="_blank" rel="noopener">View credential &nearr;</a></div>
         </div>
 
         <div class="surface cert-card">
@@ -1746,7 +1777,9 @@
       <div class="social-grid">
         <a class="surface social-card" href="https://www.linkedin.com/in/rummanhuda/" target="_blank" rel="noopener noreferrer">
           <div class="social-left">
-            <div class="social-icon">in</div>
+            <div class="social-icon" aria-hidden="true">
+              <svg width="19" height="19" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"/></svg>
+            </div>
             <div class="social-info">
               <span class="social-name">LinkedIn</span>
               <span class="social-handle">/in/rummanhuda</span>
@@ -1757,7 +1790,9 @@
 
         <a class="surface social-card" href="https://github.com/rummanhuda" target="_blank" rel="noopener noreferrer">
           <div class="social-left">
-            <div class="social-icon">GH</div>
+            <div class="social-icon" aria-hidden="true">
+              <svg width="19" height="19" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 2.9-.39c.98 0 1.97.13 2.9.39 2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+            </div>
             <div class="social-info">
               <span class="social-name">GitHub</span>
               <span class="social-handle">@rummanhuda</span>
@@ -1768,7 +1803,9 @@
 
         <a class="surface social-card" href="https://www.youtube.com/@rumman_huda" target="_blank" rel="noopener noreferrer">
           <div class="social-left">
-            <div class="social-icon">YT</div>
+            <div class="social-icon" aria-hidden="true">
+              <svg width="19" height="19" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </div>
             <div class="social-info">
               <span class="social-name">YouTube</span>
               <span class="social-handle">@rumman_huda</span>
@@ -1779,7 +1816,9 @@
 
         <a class="surface social-card" href="https://www.instagram.com/rumman_huda/" target="_blank" rel="noopener noreferrer">
           <div class="social-left">
-            <div class="social-icon">IG</div>
+            <div class="social-icon" aria-hidden="true">
+              <svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </div>
             <div class="social-info">
               <span class="social-name">Instagram</span>
               <span class="social-handle">@rumman_huda</span>
@@ -1790,21 +1829,12 @@
 
         <a class="surface social-card" href="https://www.facebook.com/rusho.rumman" target="_blank" rel="noopener noreferrer">
           <div class="social-left">
-            <div class="social-icon">FB</div>
+            <div class="social-icon" aria-hidden="true">
+              <svg width="19" height="19" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+            </div>
             <div class="social-info">
               <span class="social-name">Facebook</span>
               <span class="social-handle">/rusho.rumman</span>
-            </div>
-          </div>
-          <span class="social-arrow">&nearr;</span>
-        </a>
-
-        <a class="surface social-card" href="tel:+14384026789">
-          <div class="social-left">
-            <div class="social-icon">TEL</div>
-            <div class="social-info">
-              <span class="social-name">Direct Phone</span>
-              <span class="social-handle">+1 438 402 6789</span>
             </div>
           </div>
           <span class="social-arrow">&nearr;</span>
@@ -1826,13 +1856,6 @@
   </aside>
 
   <footer>
-    <div class="footer-links">
-      <a href="mailto:rumman3476@gmail.com">rumman3476@gmail.com</a>
-      <a href="tel:+14384026789">+1 438 402 6789</a>
-      <a href="https://github.com/rummanhuda" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/rummanhuda/" target="_blank">LinkedIn</a>
-      <a href="https://www.youtube.com/@rumman_huda" target="_blank">YouTube</a>
-    </div>
     <p>&copy; 2026 Md Rumman Huda Sarkar &bull; Montreal, Quebec, Canada</p>
   </footer>
 
@@ -1883,37 +1906,6 @@
             <span>Note: Embedded preview requires the <code>papers/</code> folder in your hosted repository.</span>
             <a id="modalFallbackLink" href="#" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: underline;">Open direct file link &nearr;</a>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- GitHub Pages Folder Setup Guide Modal -->
-  <div class="modal-backdrop" id="deployModal" role="dialog" aria-modal="true">
-    <div class="modal-dialog" style="max-width: 680px;">
-      <div class="modal-header">
-        <div>
-          <div class="modal-kicker">// GitHub Pages Deployment Checklist</div>
-          <h3 class="modal-title">How Your Project PDFs Are Linked</h3>
-        </div>
-        <button class="modal-close" id="closeDeployBtn">&times;</button>
-      </div>
-      <div class="modal-body">
-        <div class="modal-box">
-          <h4>1. Create a <code>papers/</code> folder in your repo</h4>
-          <p style="margin-bottom:0.65rem;">Place your extracted ZIP files inside a folder named <code>papers</code> right next to <code>index.html</code> in your <code>rummanhuda.github.io</code> repository:</p>
-          <ul>
-            <li><code>papers/ProjectReport_40293223.pdf</code> &rarr; Adaptive Noise Cancellation (LMS/NLMS)</li>
-            <li><code>papers/PRoJECT6821_pdf.pdf</code> &rarr; 6G Open RAN Security Survey</li>
-            <li><code>papers/Project Report_COEN 6711.pdf</code> &rarr; CDN Design &amp; Implementation</li>
-            <li><code>papers/VLSI final Project_IEEE format.pdf</code> &rarr; VLSI Bi-directional Shift Register</li>
-            <li><code>papers/VLSI PROJECT_IMG.pdf</code> &rarr; VLSI Layout &amp; Schematic Figures</li>
-            <li><code>papers/Telecom Project.docx</code> &rarr; Wireless Multi-Hop QualNet Simulation</li>
-          </ul>
-        </div>
-        <div class="modal-box">
-          <h4>2. Instant Interactive Access</h4>
-          <p>Once pushed to GitHub, clicking any project card title or <strong>"Read Paper (PDF)"</strong> opens the built-in reader with an executive summary, findings, and embedded PDF viewer.</p>
         </div>
       </div>
     </div>
@@ -2072,28 +2064,9 @@
       }
     });
 
-    /* Deploy Guide Modal */
-    const deployModal = $('#deployModal');
-    $('#deployGuideBtn').addEventListener('click', () => {
-      deployModal.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    });
-    $('#closeDeployBtn').addEventListener('click', () => {
-      deployModal.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-    deployModal.addEventListener('click', e => {
-      if (e.target === deployModal) {
-        deployModal.classList.remove('open');
-        document.body.style.overflow = '';
-      }
-    });
-
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') {
         closePaperModal();
-        deployModal.classList.remove('open');
-        document.body.style.overflow = '';
       }
     });
 
@@ -2518,7 +2491,7 @@
     applyTheme(saved || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
     if (!reduce) requestAnimationFrame(loop);
 
-    const copyBtn = $('#copyEmailBtn'), copyText = $('#copyEmailText');
+    const copyBtn = $('#copyEmailBtn'), copyToast = $('#copyToast');
     copyBtn.addEventListener('click', () => {
       const email = copyBtn.getAttribute('data-email');
       const tempInput = document.createElement('input');
@@ -2527,8 +2500,8 @@
       tempInput.select();
       document.execCommand('copy');
       document.body.removeChild(tempInput);
-      copyText.textContent = 'Copied to clipboard!';
-      setTimeout(() => { copyText.textContent = email; }, 2000);
+      copyToast.classList.add('show');
+      setTimeout(() => { copyToast.classList.remove('show'); }, 2000);
     });
 
     const quotes = [
