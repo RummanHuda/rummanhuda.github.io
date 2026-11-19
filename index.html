@@ -3,54 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Md Rumman Huda Sarkar — Electrical Engineer</title>
-  <meta name="description" content="Portfolio of Md Rumman Huda Sarkar — Electrical Engineer &amp; MEng ECE Candidate at Concordia University specializing in RAN, 5G/6G, and Network Optimization." />
+  <title>Md Rumman Huda Sarkar — Electrical &amp; Telecom Engineer</title>
+  <meta name="description" content="Interactive Engineering Portfolio of Md Rumman Huda Sarkar — Electrical Engineer &amp; MEng ECE Candidate at Concordia University specializing in RAN, 5G/6G, DSP, and Network Optimization." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
       --display: "Sora", "Inter", system-ui, sans-serif;
       --body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       --mono: "JetBrains Mono", ui-monospace, monospace;
-      --radius: 12px;
+      --radius: 14px;
     }
 
     :root,
     :root[data-theme="dark"] {
-      --bg: #060a13;
-      --bg-elevated: #0c1322;
-      --bg-card: rgba(12, 19, 34, 0.74);
-      --border: rgba(130, 170, 255, 0.13);
-      --border-hover: rgba(61, 209, 255, 0.5);
-      --text: #eaf1fb;
-      --text-secondary: #a7b4c8;
-      --text-muted: #74829a;
+      --bg: #050912;
+      --bg-elevated: #0b1220;
+      --bg-card: rgba(12, 19, 34, 0.78);
+      --bg-glass: rgba(15, 24, 42, 0.88);
+      --border: rgba(130, 170, 255, 0.14);
+      --border-hover: rgba(61, 209, 255, 0.55);
+      --text: #eef4fc;
+      --text-secondary: #a8b6cc;
+      --text-muted: #73829c;
       --accent: #3dd1ff;
       --accent-2: #7c8cff;
+      --accent-3: #22c55e;
       --accent-glow: rgba(61, 209, 255, 0.16);
-      --badge-bg: rgba(61, 209, 255, 0.1);
-      --nav-bg: rgba(6, 10, 19, 0.82);
+      --badge-bg: rgba(61, 209, 255, 0.11);
+      --nav-bg: rgba(5, 9, 18, 0.84);
       --on-accent: #031420;
-      --shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.8);
+      --shadow: 0 22px 44px -20px rgba(0, 0, 0, 0.85);
     }
 
     :root[data-theme="light"] {
-      --bg: #f2f5fa;
+      --bg: #f1f5fb;
       --bg-elevated: #ffffff;
-      --bg-card: rgba(255, 255, 255, 0.86);
-      --border: rgba(15, 30, 60, 0.1);
-      --border-hover: rgba(11, 107, 203, 0.5);
+      --bg-card: rgba(255, 255, 255, 0.9);
+      --bg-glass: rgba(255, 255, 255, 0.96);
+      --border: rgba(15, 30, 60, 0.11);
+      --border-hover: rgba(11, 107, 203, 0.55);
       --text: #0a1220;
-      --text-secondary: #3b475a;
-      --text-muted: #66738a;
+      --text-secondary: #394659;
+      --text-muted: #64728a;
       --accent: #0b6bcb;
       --accent-2: #5b5bd6;
+      --accent-3: #16a34a;
       --accent-glow: rgba(11, 107, 203, 0.1);
       --badge-bg: rgba(11, 107, 203, 0.08);
-      --nav-bg: rgba(242, 245, 250, 0.86);
+      --nav-bg: rgba(241, 245, 251, 0.88);
       --on-accent: #ffffff;
-      --shadow: 0 20px 40px -22px rgba(15, 30, 60, 0.22);
+      --shadow: 0 20px 40px -22px rgba(15, 30, 60, 0.2);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -58,26 +62,26 @@
     body {
       min-height: 100vh;
       overflow-x: hidden;
-      line-height: 1.65;
+      line-height: 1.6;
       font-family: var(--body);
       background-color: var(--bg);
       color: var(--text);
       transition: background-color 0.3s ease, color 0.3s ease;
       background-image:
-        radial-gradient(ellipse 80% 50% at 50% -10%, var(--accent-glow), transparent),
+        radial-gradient(ellipse 85% 48% at 50% -8%, var(--accent-glow), transparent),
         linear-gradient(to right, var(--border) 1px, transparent 1px),
         linear-gradient(to bottom, var(--border) 1px, transparent 1px);
       background-size: 100% 100%, 56px 56px, 56px 56px;
-      background-position: top center, center top, center top;
     }
     a { color: inherit; }
-    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+    button { font-family: inherit; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 
     #progress {
       position: fixed;
       top: 0; left: 0; right: 0;
-      height: 2px;
-      z-index: 200;
+      height: 3px;
+      z-index: 250;
       transform: scaleX(0);
       transform-origin: 0 50%;
       background: linear-gradient(90deg, var(--accent), var(--accent-2));
@@ -87,25 +91,25 @@
     nav {
       position: sticky;
       top: 0;
-      z-index: 100;
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      z-index: 120;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       background: var(--nav-bg);
       border-bottom: 1px solid var(--border);
     }
     .nav-inner {
-      max-width: 1040px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 0.85rem 1.5rem;
+      padding: 0.8rem 1.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1.25rem;
+      gap: 1rem;
     }
     .brand {
       font-family: var(--mono);
-      font-weight: 500;
-      font-size: 0.92rem;
+      font-weight: 600;
+      font-size: 0.9rem;
       color: var(--text);
       text-decoration: none;
       display: flex;
@@ -125,13 +129,13 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 1.35rem;
+      gap: 1.25rem;
       min-width: 0;
     }
     .nav-links a {
       text-decoration: none;
       color: var(--text-secondary);
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       font-weight: 500;
       transition: color 0.2s;
       white-space: nowrap;
@@ -140,19 +144,23 @@
     .nav-links a.active {
       color: var(--accent);
     }
-
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
     .theme-btn {
       background: var(--bg-elevated);
       border: 1px solid var(--border);
       color: var(--text);
-      padding: 0.42rem 0.75rem;
+      padding: 0.4rem 0.72rem;
       border-radius: 8px;
       cursor: pointer;
       font-family: var(--mono);
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.38rem;
       transition: border-color 0.2s, transform 0.15s;
       white-space: nowrap;
     }
@@ -181,65 +189,68 @@
       inset: 0;
       z-index: 0;
       pointer-events: none;
-      background: radial-gradient(ellipse 65% 75% at 28% 45%, var(--bg) 0%, transparent 72%);
-      opacity: 0.82;
+      background: radial-gradient(ellipse 68% 80% at 26% 48%, var(--bg) 0%, transparent 76%);
+      opacity: 0.86;
     }
     .hero-inner {
       position: relative;
       z-index: 1;
-      max-width: 1040px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 5rem 1.5rem 2.5rem;
+      padding: 4.25rem 1.5rem 2.75rem;
+      display: grid;
+      grid-template-columns: 1.35fr 0.95fr;
+      gap: 2.25rem;
+      align-items: center;
     }
     .status-pill {
       display: inline-flex;
       align-items: center;
       gap: 0.55rem;
-      padding: 0.35rem 0.85rem;
+      padding: 0.34rem 0.85rem;
       border-radius: 999px;
       background: var(--badge-bg);
       border: 1px solid var(--border-hover);
       color: var(--accent);
-      font: 400 0.78rem var(--mono);
-      margin-bottom: 1.5rem;
-    }
-    .hero h1 {
-      font: 700 clamp(2.5rem, 6.8vw, 4.6rem)/1.04 var(--display);
-      letter-spacing: -0.035em;
-      margin-bottom: 1rem;
-      max-width: 15ch;
-    }
-    .hero-role {
-      font: 600 clamp(1.1rem, 2.2vw, 1.4rem) var(--display);
-      color: var(--accent);
+      font: 500 0.77rem var(--mono);
       margin-bottom: 1.25rem;
     }
+    .hero h1 {
+      font: 800 clamp(2.35rem, 5.5vw, 4.1rem)/1.05 var(--display);
+      letter-spacing: -0.035em;
+      margin-bottom: 0.8rem;
+    }
+    .hero-role {
+      font: 600 clamp(1.05rem, 2vw, 1.32rem) var(--display);
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
     .hero-summary {
-      max-width: 700px;
       color: var(--text-secondary);
-      font-size: 1.02rem;
-      margin-bottom: 2rem;
+      font-size: 0.98rem;
+      margin-bottom: 1.65rem;
+      max-width: 58ch;
     }
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.8rem;
+      gap: 0.7rem;
       align-items: center;
     }
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.66rem 1.15rem;
-      border-radius: 8px;
-      font: 500 0.9rem var(--body);
+      gap: 0.48rem;
+      padding: 0.62rem 1.05rem;
+      border-radius: 9px;
+      font: 500 0.87rem var(--body);
       text-decoration: none;
       cursor: pointer;
       border: 1px solid var(--border);
       background: var(--bg-card);
       backdrop-filter: blur(8px);
       color: var(--text);
-      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s, background 0.2s;
     }
     .btn:hover {
       border-color: var(--border-hover);
@@ -254,22 +265,122 @@
     }
     .btn-primary:hover {
       color: var(--on-accent);
+      filter: brightness(1.06);
     }
 
-    .hud {
+    /* Right Hero Telemetry & Quick Stats Deck */
+    .hero-deck {
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem 1.75rem;
-      margin-top: 2.5rem;
-      font: 400 0.78rem var(--mono);
-      color: var(--text-muted);
+      flex-direction: column;
+      gap: 0.95rem;
     }
-    .hud b { color: var(--accent); font-weight: 500; }
-    .hud .live { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-secondary); }
+    .telemetry-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+    .telemetry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font: 500 0.75rem var(--mono);
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .telemetry-live {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--accent-3);
+      font-weight: 600;
+    }
+    .telemetry-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.65rem;
+      margin-bottom: 0.85rem;
+    }
+    .tele-metric {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.65rem 0.75rem;
+    }
+    .tele-label {
+      font: 400 0.68rem var(--mono);
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .tele-val {
+      font: 600 1.02rem var(--mono);
+      color: var(--accent);
+      margin-top: 0.15rem;
+    }
+    .signal-bars {
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      height: 16px;
+      margin-top: 0.35rem;
+    }
+    .signal-bars span {
+      width: 4px;
+      border-radius: 2px;
+      background: var(--border);
+      transition: background 0.25s;
+    }
+    .signal-bars span:nth-child(1) { height: 28%; }
+    .signal-bars span:nth-child(2) { height: 48%; }
+    .signal-bars span:nth-child(3) { height: 68%; }
+    .signal-bars span:nth-child(4) { height: 86%; }
+    .signal-bars span:nth-child(5) { height: 100%; }
+    .signal-bars span.on { background: var(--accent); box-shadow: 0 0 6px var(--accent); }
+    .telemetry-hint {
+      font: 400 0.74rem var(--mono);
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
 
-    /* Sections */
-    main { max-width: 1040px; margin: 0 auto; padding: 4.5rem 1.5rem 3.5rem; }
-    section { margin-bottom: 5rem; scroll-margin-top: 5rem; }
+    .kpi-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+    .kpi-box {
+      background: var(--bg-card);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.95rem 1rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .kpi-box:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+    }
+    .kpi-num {
+      font: 700 1.35rem var(--display);
+      color: var(--text);
+    }
+    .kpi-num span { color: var(--accent); }
+    .kpi-desc {
+      font-size: 0.76rem;
+      color: var(--text-secondary);
+      margin-top: 0.15rem;
+    }
+
+    /* Main Container */
+    main { max-width: 1120px; margin: 0 auto; padding: 4rem 1.5rem 3rem; }
+    section { margin-bottom: 5rem; scroll-margin-top: 4.8rem; }
     .section-header {
       display: flex;
       align-items: center;
@@ -277,59 +388,414 @@
       flex-wrap: wrap;
       gap: 1rem;
       margin-bottom: 1.75rem;
-      padding-bottom: 0.8rem;
+      padding-bottom: 0.85rem;
       border-bottom: 1px solid var(--border);
     }
-    .section-title { font: 700 1.6rem var(--display); letter-spacing: -0.02em; }
+    .section-title-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .section-kicker {
+      font: 500 0.74rem var(--mono);
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .section-title { font: 700 1.65rem var(--display); letter-spacing: -0.02em; }
 
-    .bento-card,
-    .timeline-item,
-    .project-card,
-    .cert-card,
-    .social-card,
-    .quote-box {
+    /* Shared Card Surfaces */
+    .surface {
       position: relative;
       background: var(--bg-card);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
     }
-    .bento-card::after,
-    .project-card::after,
-    .cert-card::after,
-    .social-card::after,
-    .quote-box::after {
-      content: "";
-      position: absolute;
-      left: 14px;
-      right: 14px;
-      top: -1px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--accent), transparent);
-      opacity: 0;
-      transition: opacity 0.25s;
-    }
-    .bento-card:hover,
-    .project-card:hover,
-    .cert-card:hover,
-    .social-card:hover,
-    .timeline-item:hover,
-    .quote-box:hover {
+    .surface:hover {
       border-color: var(--border-hover);
     }
-    .bento-card:hover::after,
-    .project-card:hover::after,
-    .cert-card:hover::after,
-    .social-card:hover::after,
-    .quote-box:hover::after {
-      opacity: 1;
+
+    /* Interactive Projects & Research */
+    .filter-bar { display: flex; gap: 0.45rem; flex-wrap: wrap; }
+    .filter-btn {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      padding: 0.38rem 0.88rem;
+      border-radius: 999px;
+      font: 500 0.8rem var(--body);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--badge-bg);
+      border-color: var(--border-hover);
+      color: var(--accent);
+    }
+    .active-skill-banner {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      background: var(--badge-bg);
+      border: 1px solid var(--border-hover);
+      border-radius: 10px;
+      padding: 0.65rem 1rem;
+      margin-bottom: 1.25rem;
+      font: 500 0.84rem var(--mono);
+      color: var(--accent);
+    }
+    .active-skill-banner.visible { display: flex; }
+    .clear-skill-btn {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.76rem;
     }
 
-    .bento-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.1rem; }
-    .bento-card { padding: 1.45rem; }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.3rem;
+    }
+    .project-card {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.15rem;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+    .project-card.hidden { display: none; }
+    .project-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .project-type {
+      font: 500 0.75rem var(--mono);
+      color: var(--accent);
+      background: var(--badge-bg);
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+    }
+    .project-year { font: 400 0.78rem var(--mono); color: var(--text-muted); }
+
+    /* Clickable Project Title */
+    .project-title-btn {
+      background: none;
+      border: none;
+      padding: 0;
+      text-align: left;
+      color: var(--text);
+      font: 700 1.12rem/1.35 var(--display);
+      cursor: pointer;
+      margin-bottom: 0.65rem;
+      display: inline-flex;
+      align-items: flex-start;
+      gap: 0.45rem;
+      transition: color 0.2s;
+    }
+    .project-title-btn:hover {
+      color: var(--accent);
+    }
+    .project-title-btn .title-icon {
+      flex: none;
+      margin-top: 0.2rem;
+      color: var(--accent);
+      opacity: 0.85;
+      transition: transform 0.2s;
+    }
+    .project-title-btn:hover .title-icon {
+      transform: translate(2px, -2px);
+    }
+
+    .project-summary {
+      font-size: 0.89rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.95rem;
+    }
+    .metric-highlight {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 0.55rem 0.8rem;
+      margin-bottom: 0.95rem;
+      font: 500 0.78rem var(--mono);
+    }
+    .metric-highlight span:first-child { color: var(--text-muted); }
+    .metric-highlight strong { color: var(--accent-3); }
+
+    .pill-wrap { display: flex; flex-wrap: wrap; gap: 0.42rem; }
+    .pill {
+      font: 400 0.75rem var(--mono);
+      padding: 0.26rem 0.62rem;
+      border-radius: 6px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+    .pill:hover,
+    .pill.selected {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--badge-bg);
+    }
+
+    .project-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+    .paper-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+    .paper-btn {
+      flex: 1;
+      min-width: 135px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.52rem 0.85rem;
+      border-radius: 8px;
+      font: 600 0.8rem var(--mono);
+      cursor: pointer;
+      text-decoration: none;
+      border: 1px solid var(--border-hover);
+      background: var(--badge-bg);
+      color: var(--accent);
+      transition: all 0.2s;
+    }
+    .paper-btn:hover {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: var(--on-accent);
+      border-color: transparent;
+    }
+    .paper-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.52rem 0.78rem;
+      border-radius: 8px;
+      font: 500 0.78rem var(--mono);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      background: var(--bg-elevated);
+      color: var(--text-secondary);
+      transition: all 0.2s;
+    }
+    .paper-btn-secondary:hover {
+      border-color: var(--border-hover);
+      color: var(--text);
+    }
+
+    /* Interactive Engineering Sandbox */
+    .sandbox-shell {
+      padding: 1.5rem;
+    }
+    .sandbox-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.35rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .sandbox-tab {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      padding: 0.55rem 1rem;
+      border-radius: 9px;
+      font: 600 0.84rem var(--display);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+    }
+    .sandbox-tab.active,
+    .sandbox-tab:hover {
+      border-color: var(--border-hover);
+      background: var(--badge-bg);
+      color: var(--accent);
+    }
+    .sandbox-panel { display: none; }
+    .sandbox-panel.active {
+      display: grid;
+      grid-template-columns: 1.45fr 1fr;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .sim-canvas-wrap {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.85rem;
+      position: relative;
+    }
+    .sim-canvas-wrap canvas {
+      width: 100%;
+      height: 220px;
+      display: block;
+      border-radius: 8px;
+    }
+    .sim-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .sim-controls h3 {
+      font: 700 1.12rem var(--display);
+    }
+    .sim-controls p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+    }
+    .control-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      font: 500 0.8rem var(--mono);
+    }
+    .control-row input[type="range"] {
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+    .algo-toggle {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .algo-btn {
+      flex: 1;
+      padding: 0.45rem 0.75rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-elevated);
+      color: var(--text-secondary);
+      font: 600 0.8rem var(--mono);
+      cursor: pointer;
+    }
+    .algo-btn.active {
+      background: var(--badge-bg);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* Interactive Experience & Education Explorer */
+    .career-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 1.35rem;
+      align-items: start;
+    }
+    .role-selector {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+    .role-tab {
+      text-align: left;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .role-tab:hover,
+    .role-tab.active {
+      border-color: var(--border-hover);
+      background: var(--bg-elevated);
+      transform: translateX(3px);
+    }
+    .role-tab.active {
+      box-shadow: inset 3px 0 0 var(--accent);
+    }
+    .role-tab-title {
+      font: 600 0.96rem var(--display);
+      color: var(--text);
+      display: block;
+    }
+    .role-tab-sub {
+      font: 400 0.78rem var(--mono);
+      color: var(--accent);
+      margin-top: 0.25rem;
+      display: block;
+    }
+    .role-detail {
+      padding: 1.65rem;
+      display: none;
+    }
+    .role-detail.active { display: block; }
+    .role-detail-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .role-detail-title { font: 700 1.25rem var(--display); }
+    .role-detail-org { font-size: 0.92rem; color: var(--text-secondary); margin-top: 0.2rem; }
+    .role-badge {
+      font: 500 0.78rem var(--mono);
+      color: var(--accent);
+      background: var(--badge-bg);
+      padding: 0.28rem 0.72rem;
+      border-radius: 999px;
+    }
+    .impact-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.85rem;
+      margin-bottom: 1.1rem;
+    }
+    .impact-item {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.9rem;
+      font-size: 0.87rem;
+      color: var(--text-secondary);
+    }
+    .impact-item strong {
+      display: block;
+      font: 600 0.82rem var(--mono);
+      color: var(--accent);
+      margin-bottom: 0.3rem;
+    }
+
+    /* Technical Expertise Matrix */
+    .bento-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.15rem; }
+    .bento-card { padding: 1.4rem; }
     .bento-card h3 {
-      font: 600 1rem var(--display);
+      font: 600 0.98rem var(--display);
       margin-bottom: 0.95rem;
       display: flex;
       align-items: center;
@@ -344,103 +810,65 @@
       box-shadow: 0 0 10px var(--accent);
       flex: none;
     }
-    .pill-wrap { display: flex; flex-wrap: wrap; gap: 0.45rem; }
-    .pill {
-      font: 400 0.78rem var(--mono);
-      padding: 0.3rem 0.68rem;
-      border-radius: 6px;
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      color: var(--text-secondary);
-    }
 
-    .timeline {
-      position: relative;
-      padding-left: 1.75rem;
-      border-left: 1px solid var(--border);
+    /* Domain Switcher & Timeline Filter Pills */
+    .domain-bar {
       display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-    .timeline-item { padding: 1.5rem; }
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: -2.18rem;
-      top: 1.65rem;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--accent);
-      border: 3px solid var(--bg);
-      box-shadow: 0 0 0 2px var(--accent), 0 0 14px var(--accent);
-    }
-    .item-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
       flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 0.35rem;
+      gap: 0.45rem;
     }
-    .item-title { font: 600 1.1rem var(--display); }
-    .item-date {
-      font: 400 0.8rem var(--mono);
-      color: var(--accent);
-      background: var(--badge-bg);
-      padding: 0.22rem 0.65rem;
-      border-radius: 999px;
-    }
-    .item-org { font-size: 0.92rem; font-weight: 500; color: var(--text-secondary); margin-bottom: 0.85rem; }
-    .timeline-item > .item-org:last-child { margin-bottom: 0; }
-    .item-list { padding-left: 1.15rem; color: var(--text-secondary); font-size: 0.93rem; }
-    .item-list li { margin-bottom: 0.4rem; }
-
-    .filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-    .filter-btn {
+    .domain-btn {
       background: var(--bg-elevated);
       border: 1px solid var(--border);
       color: var(--text-secondary);
-      padding: 0.35rem 0.85rem;
+      padding: 0.36rem 0.82rem;
       border-radius: 999px;
-      font: 400 0.82rem var(--body);
+      font: 500 0.79rem var(--mono);
       cursor: pointer;
       transition: all 0.2s;
     }
-    .filter-btn.active,
-    .filter-btn:hover {
+    .domain-btn.active,
+    .domain-btn:hover {
       background: var(--badge-bg);
       border-color: var(--border-hover);
       color: var(--accent);
     }
-    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem; }
-    .project-card { padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; }
-    .project-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-    .project-card.hidden { display: none; }
-    .project-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem; }
-    .project-type { font: 400 0.78rem var(--mono); color: var(--accent); }
-    .project-year { font: 400 0.8rem var(--mono); color: var(--text-muted); }
-    .project-card h3 { font: 600 1.08rem/1.35 var(--display); margin-bottom: 0.65rem; }
-    .project-card p, .project-card ul { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.15rem; }
-    .project-card ul { padding-left: 1.1rem; }
-    .project-card li { margin-bottom: 0.35rem; }
+    .bento-card.dimmed {
+      opacity: 0.38;
+      transform: scale(0.99);
+    }
+    .role-tab.hidden-tab {
+      display: none;
+    }
+    .pdf-fallback-note {
+      padding: 0.65rem 0.9rem;
+      background: rgba(61, 209, 255, 0.08);
+      border-top: 1px solid var(--border);
+      font: 400 0.77rem var(--mono);
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
 
-    .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+    /* Certifications & Socials */
+    .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 1rem; }
     .cert-card { padding: 1.25rem 1.35rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.75rem; }
-    .cert-title { font-weight: 600; font-size: 0.98rem; }
-    .cert-footer { display: flex; justify-content: space-between; align-items: center; gap: 1rem; font-size: 0.83rem; color: var(--text-muted); }
-    .cert-id { font: 400 0.78rem var(--mono); }
+    .cert-title { font-weight: 600; font-size: 0.96rem; }
+    .cert-footer { display: flex; justify-content: space-between; align-items: center; gap: 1rem; font-size: 0.82rem; color: var(--text-muted); }
+    .cert-id { font: 400 0.76rem var(--mono); }
     .cert-link { color: var(--accent); text-decoration: none; font-weight: 500; }
     .cert-link:hover { text-decoration: underline; }
 
-    /* Socials Grid */
     .social-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1rem;
     }
     .social-card {
-      padding: 1.25rem 1.35rem;
+      padding: 1.2rem 1.35rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -451,75 +879,27 @@
       transform: translateY(-2px);
       box-shadow: var(--shadow);
     }
-    .social-left {
-      display: flex;
-      align-items: center;
-      gap: 0.95rem;
-      min-width: 0;
-    }
+    .social-left { display: flex; align-items: center; gap: 0.9rem; min-width: 0; }
     .social-icon {
-      width: 40px;
-      height: 40px;
+      width: 40px; height: 40px;
       border-radius: 10px;
       background: var(--badge-bg);
       border: 1px solid var(--border);
       color: var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
       flex: none;
     }
-    .social-info {
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-    }
-    .social-name {
-      font: 600 0.98rem var(--display);
-      color: var(--text);
-    }
-    .social-handle {
-      font: 400 0.8rem var(--mono);
-      color: var(--text-muted);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .social-arrow {
-      color: var(--text-muted);
-      font-family: var(--mono);
-      font-size: 0.95rem;
-      transition: transform 0.2s, color 0.2s;
-    }
-    .social-card:hover .social-arrow {
-      color: var(--accent);
-      transform: translate(2px, -2px);
-    }
+    .social-info { display: flex; flex-direction: column; min-width: 0; }
+    .social-name { font: 600 0.96rem var(--display); color: var(--text); }
+    .social-handle { font: 400 0.79rem var(--mono); color: var(--text-muted); }
+    .social-arrow { color: var(--text-muted); font-family: var(--mono); transition: transform 0.2s, color 0.2s; }
+    .social-card:hover .social-arrow { color: var(--accent); transform: translate(2px, -2px); }
 
-    /* Motivating Quote Section */
-    .quote-section {
-      max-width: 1040px;
-      margin: 0 auto 3.5rem;
-      padding: 0 1.5rem;
-    }
-    .quote-box {
-      padding: 1.6rem 1.8rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    .quote-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-    }
-    .quote-tag {
-      font: 500 0.75rem var(--mono);
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
+    /* Quote Section */
+    .quote-section { max-width: 1120px; margin: 0 auto 3.5rem; padding: 0 1.5rem; }
+    .quote-box { padding: 1.5rem 1.75rem; display: flex; flex-direction: column; gap: 0.7rem; }
+    .quote-top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .quote-tag { font: 500 0.74rem var(--mono); color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; }
     .quote-refresh {
       background: var(--bg-elevated);
       border: 1px solid var(--border);
@@ -528,43 +908,170 @@
       padding: 0.28rem 0.65rem;
       border-radius: 6px;
       cursor: pointer;
-      transition: border-color 0.2s, color 0.2s;
     }
-    .quote-refresh:hover {
-      border-color: var(--border-hover);
-      color: var(--accent);
-    }
-    .quote-text {
-      font: 500 1.05rem/1.55 var(--display);
-      color: var(--text);
-    }
-    .quote-author {
-      font: 400 0.82rem var(--mono);
-      color: var(--text-muted);
-    }
+    .quote-refresh:hover { border-color: var(--border-hover); color: var(--accent); }
+    .quote-text { font: 500 1.02rem/1.55 var(--display); color: var(--text); }
+    .quote-author { font: 400 0.8rem var(--mono); color: var(--text-muted); }
 
     footer {
       border-top: 1px solid var(--border);
-      padding: 2.5rem 1.5rem;
+      padding: 2.4rem 1.5rem;
       text-align: center;
       color: var(--text-muted);
-      font-size: 0.88rem;
+      font-size: 0.86rem;
     }
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1.25rem;
-      margin-bottom: 0.85rem;
-    }
+    .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.2rem; margin-bottom: 0.8rem; }
     .footer-links a { color: var(--text-secondary); text-decoration: none; }
     .footer-links a:hover { color: var(--accent); }
 
-    @media (max-width: 680px) {
+    /* Paper Reader Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      background: rgba(3, 6, 14, 0.82);
+      backdrop-filter: blur(10px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal-dialog {
+      width: 100%;
+      max-width: 960px;
+      max-height: 92vh;
+      background: var(--bg-glass);
+      border: 1px solid var(--border-hover);
+      border-radius: 16px;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.75);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .modal-header {
+      padding: 1.15rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .modal-kicker {
+      font: 500 0.75rem var(--mono);
+      color: var(--accent);
+      margin-bottom: 0.25rem;
+    }
+    .modal-title {
+      font: 700 1.2rem/1.3 var(--display);
+    }
+    .modal-close {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      color: var(--text);
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      flex: none;
+    }
+    .modal-close:hover { border-color: var(--border-hover); color: var(--accent); }
+    .modal-body {
+      padding: 1.35rem 1.5rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.15rem;
+    }
+    .modal-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+    }
+    .modal-file-path {
+      font: 500 0.8rem var(--mono);
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      word-break: break-all;
+    }
+    .modal-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+    .modal-summary-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 1rem;
+    }
+    .modal-box {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.1rem;
+    }
+    .modal-box h4 {
+      font: 600 0.84rem var(--mono);
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 0.55rem;
+    }
+    .modal-box p, .modal-box li {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+    }
+    .modal-box ul { padding-left: 1.1rem; }
+    .modal-box li { margin-bottom: 0.35rem; }
+    .pdf-frame-container {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #090e1a;
+      min-height: 380px;
+      display: flex;
+      flex-direction: column;
+    }
+    .pdf-frame-bar {
+      background: var(--bg-elevated);
+      padding: 0.5rem 0.9rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font: 400 0.76rem var(--mono);
+      color: var(--text-muted);
+    }
+    .pdf-iframe {
+      width: 100%;
+      height: 420px;
+      border: none;
+      background: #111827;
+    }
+    .local-preview-label {
+      cursor: pointer;
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 860px) {
+      .hero-inner { grid-template-columns: 1fr; padding-top: 3rem; }
+      .sandbox-panel.active { grid-template-columns: 1fr; }
+      .career-layout { grid-template-columns: 1fr; }
+      .modal-summary-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
       .brand .txt { display: none; }
-      .nav-links { flex: 1; overflow-x: auto; gap: 1.1rem; scrollbar-width: none; }
-      .hero-inner { padding-top: 3.25rem; }
-      main { padding-top: 3rem; }
+      .nav-links { flex: 1; overflow-x: auto; gap: 1rem; scrollbar-width: none; }
+      .kpi-strip { grid-template-columns: 1fr; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -580,171 +1087,312 @@
       <a href="#top" class="brand"><span class="dot"></span><span class="txt">rummanhuda.github.io</span></a>
       <div class="nav-links">
         <a href="#expertise">Expertise</a>
-        <a href="#experience">Experience</a>
+        <a href="#experience">Experience &amp; Education</a>
         <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
         <a href="#certifications">Certifications</a>
+        <a href="#sandbox">Sandbox</a>
         <a href="#socials">Socials</a>
       </div>
-      <button class="theme-btn" id="themeToggle" aria-label="Toggle dark and light theme">
-        <span id="themeIcon">☀️</span>
-        <span id="themeLabel">Light</span>
-      </button>
+      <div class="nav-controls">
+        <button class="theme-btn" id="deployGuideBtn" title="How to link your PDFs on GitHub Pages">
+          <span>📂 PDF Setup</span>
+        </button>
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle dark and light theme">
+          <span id="themeIcon">☀️</span>
+          <span id="themeLabel">Light</span>
+        </button>
+      </div>
     </div>
   </nav>
 
+  <!-- Interactive Cellular Handover Hero -->
   <header class="hero" id="top">
     <canvas id="mesh" aria-hidden="true"></canvas>
     <div class="hero-inner">
-      <div class="status-pill">
-        <i class="dot"></i> Open to Electrical Engineering Roles &bull; Montreal, QC
-      </div>
-      <h1>Md Rumman Huda Sarkar</h1>
-      <div class="hero-role">Electrical Engineer &amp; MEng ECE Candidate</div>
-      <p class="hero-summary">
-        Electrical Engineer with 16 months of hands-on RAN maintenance and surveillance experience at Banglalink, currently completing an MEng in Electrical and Computer Engineering at Concordia University. Skilled in alarm analysis, KPI troubleshooting, and field coordination—focused on keeping telecom infrastructure resilient and advancing into RF and network optimization.
-      </p>
+      <div>
+        <div class="status-pill">
+          <i class="dot"></i> Open to Electrical &amp; Telecom Roles &bull; Montreal, QC
+        </div>
+        <h1>Md Rumman Huda Sarkar</h1>
+        <div class="hero-role">Electrical Engineer &amp; MEng ECE Candidate</div>
+        <p class="hero-summary">
+          Bridging live RAN operations (16 months at Banglalink) with graduate research in 6G Open RAN security, adaptive DSP, and high-speed network systems at Concordia University.
+        </p>
 
-      <div class="hero-actions">
-        <a href="resume.pdf" target="_blank" class="btn btn-primary">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-          Download CV (PDF)
-        </a>
-        <button class="btn" id="copyEmailBtn" data-email="rumman3476@gmail.com">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-          <span id="copyEmailText">rumman3476@gmail.com</span>
-        </button>
-        <a href="https://github.com/rummanhuda" target="_blank" class="btn">GitHub</a>
-        <a href="https://www.linkedin.com/in/rummanhuda/" target="_blank" class="btn">LinkedIn</a>
-        <a href="tel:+14384026789" class="btn">+1 438 402 6789</a>
+        <div class="hero-actions">
+          <a href="resume.pdf" target="_blank" class="btn btn-primary">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CV (PDF)
+          </a>
+          <button class="btn" id="copyEmailBtn" data-email="rumman3476@gmail.com">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span id="copyEmailText">rumman3476@gmail.com</span>
+          </button>
+          <a href="https://github.com/rummanhuda" target="_blank" class="btn">GitHub</a>
+          <a href="https://www.linkedin.com/in/rummanhuda/" target="_blank" class="btn">LinkedIn</a>
+          <a href="tel:+14384026789" class="btn">+1 438 402 6789</a>
+        </div>
       </div>
 
-      <div class="hud" aria-hidden="true">
-        <span class="live"><i class="dot"></i>live handover demo</span>
-        <span>serving cell <b id="hudCell">BTS-01</b></span>
-        <span>signal <b id="hudSig">-80 dBm</b></span>
-        <span>handovers <b id="hudHo">0</b></span>
-        <span>Move your cursor (or drag a finger): you are the phone.</span>
+      <div class="hero-deck">
+        <div class="telemetry-card">
+          <div class="telemetry-header">
+            <span class="telemetry-live"><i class="dot"></i> LIVE RF HANDOVER SIMULATOR</span>
+            <span>UE-01 &bull; 5G NR</span>
+          </div>
+          <div class="telemetry-grid">
+            <div class="tele-metric">
+              <div class="tele-label">Serving Cell</div>
+              <div class="tele-val" id="hudCell">BTS-01</div>
+            </div>
+            <div class="tele-metric">
+              <div class="tele-label">RSRP Signal</div>
+              <div class="tele-val" id="hudSig">-80 dBm</div>
+              <div class="signal-bars" id="sigBars">
+                <span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span></span>
+              </div>
+            </div>
+            <div class="tele-metric">
+              <div class="tele-label">Handovers</div>
+              <div class="tele-val" id="hudHo">0</div>
+            </div>
+          </div>
+          <div class="telemetry-hint">
+            <span>Move cursor across hero mesh to steer UE</span>
+            <span id="hudNeighbor">Target: BTS-02</span>
+          </div>
+        </div>
+
+        <div class="kpi-strip">
+          <div class="kpi-box">
+            <div class="kpi-num">16<span>+</span></div>
+            <div class="kpi-desc">Months Live RAN Ops &amp; SLA Faults</div>
+          </div>
+          <div class="kpi-box">
+            <div class="kpi-num">7<span>+</span></div>
+            <div class="kpi-desc">Research &amp; Hardware Papers</div>
+          </div>
+          <div class="kpi-box">
+            <div class="kpi-num">MEng</div>
+            <div class="kpi-desc">ECE @ Concordia (2024&ndash;2026)</div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- Technical Expertise -->
+    <!-- Section 1: Technical Expertise -->
     <section id="expertise">
       <div class="section-header">
-        <h2 class="section-title">Technical Expertise</h2>
+        <div class="section-title-group">
+          <span class="section-kicker">// Click any skill pill to filter matching project reports below</span>
+          <h2 class="section-title">Technical Expertise</h2>
+        </div>
+        <div class="domain-bar" aria-label="Domain highlight filter">
+          <button class="domain-btn active" data-domain="all">All Domains</button>
+          <button class="domain-btn" data-domain="telecom">RAN &amp; Telecom</button>
+          <button class="domain-btn" data-domain="noc">NOC &amp; Infra</button>
+          <button class="domain-btn" data-domain="eda">DSP, Code &amp; EDA</button>
+        </div>
       </div>
 
       <div class="bento-grid">
-        <div class="bento-card">
+        <div class="surface bento-card" data-domain-card="telecom">
           <h3>Networking &amp; Wireless Protocols</h3>
           <div class="pill-wrap">
-            <span class="pill">TCP/IP</span>
-            <span class="pill">UDP</span>
-            <span class="pill">OSI Model</span>
-            <span class="pill">OSPF</span>
-            <span class="pill">BGP</span>
-            <span class="pill">VLANs</span>
-            <span class="pill">STP</span>
-            <span class="pill">DNS / DHCP</span>
-            <span class="pill">VPN &amp; ACLs</span>
-            <span class="pill">LAN/WAN</span>
-            <span class="pill">LTE / 5G</span>
-            <span class="pill">Open RAN</span>
-            <span class="pill">RET Configuration</span>
-            <span class="pill">BTS Upgrades</span>
-            <span class="pill">HTTP/2 &amp; CDN</span>
+            <span class="pill" data-skill="TCP/IP">TCP/IP</span>
+            <span class="pill" data-skill="UDP">UDP</span>
+            <span class="pill" data-skill="OSPF">OSPF</span>
+            <span class="pill" data-skill="BGP">BGP</span>
+            <span class="pill" data-skill="VLANs">VLANs</span>
+            <span class="pill" data-skill="LTE / 5G">LTE / 5G</span>
+            <span class="pill" data-skill="Open RAN">Open RAN</span>
+            <span class="pill" data-skill="RET Configuration">RET Configuration</span>
+            <span class="pill" data-skill="HTTP/2 &amp; CDN">HTTP/2 &amp; CDN</span>
           </div>
         </div>
 
-        <div class="bento-card">
+        <div class="surface bento-card" data-domain-card="noc">
           <h3>NOC &amp; Network Monitoring</h3>
           <div class="pill-wrap">
-            <span class="pill">Incident &amp; Fault Management</span>
-            <span class="pill">Alarm &amp; KPI Analysis</span>
-            <span class="pill">Root Cause Analysis (RCA)</span>
-            <span class="pill">SLA Compliance</span>
-            <span class="pill">SNMP</span>
-            <span class="pill">Grafana</span>
-            <span class="pill">Nagios / Zabbix</span>
-            <span class="pill">Jira</span>
+            <span class="pill" data-skill="Incident &amp; Fault Management">Incident &amp; Fault Mgmt</span>
+            <span class="pill" data-skill="Alarm &amp; KPI Analysis">Alarm &amp; KPI Analysis</span>
+            <span class="pill" data-skill="Root Cause Analysis (RCA)">Root Cause Analysis</span>
+            <span class="pill" data-skill="SLA Compliance">SLA Compliance</span>
+            <span class="pill" data-skill="SNMP">SNMP</span>
+            <span class="pill" data-skill="Grafana">Grafana</span>
+            <span class="pill" data-skill="Nagios / Zabbix">Nagios / Zabbix</span>
           </div>
         </div>
 
-        <div class="bento-card">
+        <div class="surface bento-card" data-domain-card="noc">
           <h3>Systems &amp; Infrastructure</h3>
           <div class="pill-wrap">
-            <span class="pill">Linux (Ubuntu / RHEL)</span>
-            <span class="pill">Windows Server</span>
-            <span class="pill">Active Directory (AD)</span>
-            <span class="pill">Bash Scripting</span>
-            <span class="pill">PowerShell</span>
-            <span class="pill">VMware</span>
-            <span class="pill">Docker</span>
+            <span class="pill" data-skill="Linux">Linux (Ubuntu / RHEL)</span>
+            <span class="pill" data-skill="Windows Server">Windows Server</span>
+            <span class="pill" data-skill="Active Directory">Active Directory</span>
+            <span class="pill" data-skill="Bash Scripting">Bash Scripting</span>
+            <span class="pill" data-skill="PowerShell">PowerShell</span>
+            <span class="pill" data-skill="Docker">Docker &amp; VMware</span>
           </div>
         </div>
 
-        <div class="bento-card">
+        <div class="surface bento-card" data-domain-card="eda">
           <h3>Programming, Simulation &amp; EDA</h3>
           <div class="pill-wrap">
-            <span class="pill">Python</span>
-            <span class="pill">C++</span>
-            <span class="pill">Pandas</span>
-            <span class="pill">MATLAB</span>
-            <span class="pill">QualNet 8.2</span>
-            <span class="pill">Cadence Virtuoso</span>
-            <span class="pill">ModelSim</span>
-            <span class="pill">Quartus Prime</span>
-            <span class="pill">Arduino</span>
-            <span class="pill">Signal Processing</span>
-            <span class="pill">STM32 / ESP32</span>
-            <span class="pill">VLSI Design</span>
+            <span class="pill" data-skill="Python">Python</span>
+            <span class="pill" data-skill="C++">C++</span>
+            <span class="pill" data-skill="MATLAB">MATLAB</span>
+            <span class="pill" data-skill="QualNet 8.2">QualNet 8.2</span>
+            <span class="pill" data-skill="Cadence Virtuoso">Cadence Virtuoso</span>
+            <span class="pill" data-skill="Signal Processing">Signal Processing</span>
+            <span class="pill" data-skill="STM32 / ESP32">STM32 / ESP32</span>
+            <span class="pill" data-skill="VLSI Design">VLSI Design</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Experience -->
+    <!-- Section 2: Experience & Education -->
     <section id="experience">
       <div class="section-header">
-        <h2 class="section-title">Work Experience</h2>
+        <div class="section-title-group">
+          <span class="section-kicker">// Select a role or degree to inspect key outcomes</span>
+          <h2 class="section-title">Experience &amp; Education</h2>
+        </div>
+        <div class="domain-bar" aria-label="Filter timeline category">
+          <button class="domain-btn active" data-career-filter="all">All Timeline (4)</button>
+          <button class="domain-btn" data-career-filter="work">Work Experience (2)</button>
+          <button class="domain-btn" data-career-filter="education">Education (2)</button>
+        </div>
       </div>
 
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="item-top">
-            <div class="item-title">Brand Advocate (Qualcomm)</div>
-            <span class="item-date">July 2024 &ndash; Ongoing</span>
-          </div>
-          <div class="item-org">Channel Partners Solutions LLC &bull; Canada</div>
-          <ul class="item-list">
-            <li>Advised customers and retail/channel partners on Qualcomm technologies, delivered live product demos and technical support, and gathered actionable market feedback.</li>
-          </ul>
+      <div class="career-layout">
+        <div class="role-selector" role="tablist">
+          <button class="role-tab active" data-role="qualcomm" data-career-type="work">
+            <span class="role-tab-title">Brand Advocate (Qualcomm)</span>
+            <span class="role-tab-sub">Jul 2024 &ndash; Present &bull; Canada</span>
+          </button>
+          <button class="role-tab" data-role="banglalink" data-career-type="work">
+            <span class="role-tab-title">RAN &amp; Telecom Engineer</span>
+            <span class="role-tab-sub">Jan 2023 &ndash; Apr 2024 &bull; Banglalink</span>
+          </button>
+          <button class="role-tab" data-role="concordia" data-career-type="education">
+            <span class="role-tab-title">MEng, Electrical &amp; Computer Eng.</span>
+            <span class="role-tab-sub">2024 &ndash; 2026 &bull; Concordia Univ.</span>
+          </button>
+          <button class="role-tab" data-role="aust" data-career-type="education">
+            <span class="role-tab-title">BSc, Electrical &amp; Electronics Eng.</span>
+            <span class="role-tab-sub">2017 &ndash; 2022 &bull; AUST</span>
+          </button>
         </div>
 
-        <div class="timeline-item">
-          <div class="item-top">
-            <div class="item-title">RAN &amp; Telecom Engineer</div>
-            <span class="item-date">Jan 2023 &ndash; Apr 2024</span>
+        <!-- Role 1 -->
+        <div class="surface role-detail active" id="role-qualcomm">
+          <div class="role-detail-head">
+            <div>
+              <div class="role-detail-title">Brand Advocate (Qualcomm)</div>
+              <div class="role-detail-org">Channel Partners Solutions LLC &bull; Montreal, Canada</div>
+            </div>
+            <span class="role-badge">July 2024 &ndash; Ongoing</span>
           </div>
-          <div class="item-org">Banglalink Digital Communications Ltd</div>
-          <ul class="item-list">
-            <li>Executed Level-1 RAN maintenance including Remote Electrical Tilt (RET) configuration, BTS software upgrades, and alarm logic modifications.</li>
-            <li>Monitored, prioritized, and diagnosed real-time faults across RAN network elements based on SLA severity.</li>
-            <li>Tracked network KPIs and conducted root cause analysis (RCA) for Site/Cell outages and network-wide performance fluctuations.</li>
-            <li>Coordinated with internal engineering teams and external field vendors on work orders, planned maintenance windows, and emergency recoveries.</li>
-          </ul>
+          <div class="impact-cards">
+            <div class="impact-item">
+              <strong>Technical Advisory</strong>
+              Advised retail partners and end-users on Snapdragon SoC architecture, connectivity capabilities, and on-device AI features.
+            </div>
+            <div class="impact-item">
+              <strong>Live Product Demos</strong>
+              Executed interactive hardware demonstrations and reported structured field feedback to channel operations.
+            </div>
+          </div>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="surface role-detail" id="role-banglalink">
+          <div class="role-detail-head">
+            <div>
+              <div class="role-detail-title">RAN &amp; Telecom Engineer</div>
+              <div class="role-detail-org">Banglalink Digital Communications Ltd &bull; National RAN Operations</div>
+            </div>
+            <span class="role-badge">Jan 2023 &ndash; Apr 2024 (16 Mos)</span>
+          </div>
+          <div class="impact-cards">
+            <div class="impact-item">
+              <strong>Level-1 RAN Maintenance</strong>
+              Executed Remote Electrical Tilt (RET) optimization, BTS software upgrades, and alarm logic reconfigurations across live cellular sites.
+            </div>
+            <div class="impact-item">
+              <strong>SLA Fault &amp; KPI Surveillance</strong>
+              Triaged real-time RAN element alarms by SLA severity, tracking throughput, drop rates, and accessibility KPIs.
+            </div>
+            <div class="impact-item">
+              <strong>Root Cause Analysis (RCA)</strong>
+              Diagnosed site/cell outages and coordinated emergency field recovery workflows with multi-vendor engineering teams.
+            </div>
+          </div>
+          <div class="pill-wrap">
+            <span class="pill" data-skill="LTE / 5G">LTE / 5G RAN</span>
+            <span class="pill" data-skill="RET Configuration">RET Configuration</span>
+            <span class="pill" data-skill="Root Cause Analysis (RCA)">Root Cause Analysis</span>
+            <span class="pill" data-skill="Alarm &amp; KPI Analysis">Alarm &amp; KPI Analysis</span>
+          </div>
+        </div>
+
+        <!-- Role 3 -->
+        <div class="surface role-detail" id="role-concordia">
+          <div class="role-detail-head">
+            <div>
+              <div class="role-detail-title">Master of Engineering (MEng), Electrical &amp; Computer Engineering</div>
+              <div class="role-detail-org">Concordia University &bull; Montreal, QC, Canada</div>
+            </div>
+            <span class="role-badge">Sep 2024 &ndash; Dec 2026</span>
+          </div>
+          <div class="impact-cards">
+            <div class="impact-item">
+              <strong>Graduate Focus</strong>
+              6G Open RAN security, adaptive digital signal processing, high-speed content delivery networks, and custom VLSI design.
+            </div>
+            <div class="impact-item">
+              <strong>Leadership</strong>
+              Completed the GradProSkills Graduate Leadership Program (Sep 2024).
+            </div>
+          </div>
+        </div>
+
+        <!-- Role 4 -->
+        <div class="surface role-detail" id="role-aust">
+          <div class="role-detail-head">
+            <div>
+              <div class="role-detail-title">Bachelor of Science (BSc), Electrical &amp; Electronics Engineering</div>
+              <div class="role-detail-org">Ahsanullah University of Science and Technology</div>
+            </div>
+            <span class="role-badge">2017 &ndash; 2022</span>
+          </div>
+          <div class="impact-cards">
+            <div class="impact-item">
+              <strong>Core Foundation</strong>
+              Telecommunication engineering, electromagnetics, digital electronics, power systems, and communication theory.
+            </div>
+            <div class="impact-item">
+              <strong>Capstone Research</strong>
+              Authored thesis on scalable last-mile high-speed broadband architectures and regulatory frameworks.
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects & Research -->
+    <!-- Section 3: Projects & Research Reports -->
     <section id="projects">
       <div class="section-header">
-        <h2 class="section-title">Projects &amp; Research</h2>
+        <div class="section-title-group">
+          <span class="section-kicker">// Click any project title or button to open its full report</span>
+          <h2 class="section-title">Projects &amp; Research Papers</h2>
+        </div>
         <div class="filter-bar">
-          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn active" data-filter="all">All (7)</button>
           <button class="filter-btn" data-filter="research">6G &amp; Research</button>
           <button class="filter-btn" data-filter="simulation">Networks &amp; Simulation</button>
           <button class="filter-btn" data-filter="dsp">Signal Processing</button>
@@ -752,229 +1400,425 @@
         </div>
       </div>
 
-      <div class="projects-grid">
-        <article class="project-card" data-category="dsp">
+      <div class="active-skill-banner" id="skillFilterBanner">
+        <span id="skillFilterText">Filtering by skill: Python</span>
+        <button class="clear-skill-btn" id="clearSkillFilter">Clear Skill Filter &times;</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Project 1 -->
+        <article class="surface project-card" data-category="dsp" data-project-id="anc">
           <div>
             <div class="project-meta">
               <span class="project-type">Signal Processing</span>
               <span class="project-year">Apr &ndash; May 2026</span>
             </div>
-            <h3>Adaptive Noise Cancellation of Speech Using LMS and NLMS Algorithms</h3>
-            <ul>
-              <li>Applied LMS and NLMS adaptive filters to remove additive noise from speech, using a reference noise signal fed to an adaptive FIR filter.</li>
-              <li>NLMS outperformed LMS on noise suppression: maximum output SNR of 17.58 dB versus 15.05 dB.</li>
-              <li>Decorrelation delay had the largest effect on performance, followed by step size, with filter length mattering least.</li>
-            </ul>
+            <button class="project-title-btn" data-open-paper="anc">
+              <span>Adaptive Noise Cancellation of Speech Using LMS and NLMS Algorithms</span>
+              <svg class="title-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </button>
+            <p class="project-summary">
+              Implemented adaptive FIR noise cancellation filters in Python to suppress additive acoustic noise using a correlated reference channel.
+            </p>
+            <div class="metric-highlight">
+              <span>Peak Output SNR (NLMS vs LMS)</span>
+              <strong>17.58 dB vs 15.05 dB</strong>
+            </div>
           </div>
-          <div class="pill-wrap"><span class="pill">Python</span><span class="pill">Signal Processing</span><span class="pill">LMS / NLMS</span></div>
+          <div class="project-footer">
+            <div class="pill-wrap">
+              <span class="pill" data-skill="Python">Python</span>
+              <span class="pill" data-skill="Signal Processing">Signal Processing</span>
+              <span class="pill" data-skill="LMS / NLMS">LMS / NLMS</span>
+            </div>
+            <div class="paper-actions">
+              <button class="paper-btn" data-open-paper="anc">📄 Read Paper (PDF)</button>
+              <a class="paper-btn-secondary" href="papers/ProjectReport_40293223.pdf" target="_blank" rel="noopener" title="Open direct PDF file">Direct PDF &nearr;</a>
+            </div>
+          </div>
         </article>
 
-        <article class="project-card" data-category="research">
+        <!-- Project 2 -->
+        <article class="surface project-card" data-category="research" data-project-id="oran6g">
           <div>
             <div class="project-meta">
               <span class="project-type">6G / Open RAN Research</span>
               <span class="project-year">Apr &ndash; May 2026</span>
             </div>
-            <h3>Security and Privacy in Emerging 6G Networks: A Survey of AI-Driven Solutions for Open RAN</h3>
-            <p>Surveyed AI-driven security and privacy research for 6G Open RAN, covering adversarial attack mitigation, zero-trust architectures, privacy-preserving federated learning, interface security, misconfiguration detection and explainable anomaly detection. Compared the approaches, their evaluations and limitations, and identified open research gaps.</p>
+            <button class="project-title-btn" data-open-paper="oran6g">
+              <span>Security and Privacy in Emerging 6G Networks: A Survey of AI-Driven Solutions for Open RAN</span>
+              <svg class="title-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </button>
+            <p class="project-summary">
+              Comprehensive survey evaluating AI-driven defenses across disaggregated 6G Open RAN interfaces, including Zero-Trust architectures, Federated Learning, and XAI anomaly detection.
+            </p>
+            <div class="metric-highlight">
+              <span>Focus Areas</span>
+              <strong>E2/A1/O1 Interfaces &bull; ZTA &bull; FL</strong>
+            </div>
           </div>
-          <div class="pill-wrap"><span class="pill">6G</span><span class="pill">Open RAN</span><span class="pill">AI Security</span><span class="pill">Zero Trust</span></div>
+          <div class="project-footer">
+            <div class="pill-wrap">
+              <span class="pill" data-skill="Open RAN">Open RAN</span>
+              <span class="pill" data-skill="LTE / 5G">6G / 5G</span>
+              <span class="pill" data-skill="AI Security">AI Security</span>
+            </div>
+            <div class="paper-actions">
+              <button class="paper-btn" data-open-paper="oran6g">📄 Read Paper (PDF)</button>
+              <a class="paper-btn-secondary" href="papers/PRoJECT6821_pdf.pdf" target="_blank" rel="noopener">Direct PDF &nearr;</a>
+            </div>
+          </div>
         </article>
 
-        <article class="project-card" data-category="simulation">
+        <!-- Project 3 -->
+        <article class="surface project-card" data-category="simulation" data-project-id="cdn">
           <div>
             <div class="project-meta">
-              <span class="project-type">Network Design</span>
+              <span class="project-type">Network Architecture</span>
               <span class="project-year">Sep &ndash; Dec 2025</span>
             </div>
-            <h3>Content Delivery Network Design and Implementation</h3>
-            <ul>
-              <li>Designed a CDN architecture that uses HTTP/2 multiplexed streams to make content transfer more efficient.</li>
-              <li>A centralized controller applies load-balancing algorithms to route user requests across replica servers placed near end users, aiming to reduce delivery latency and congestion.</li>
-            </ul>
+            <button class="project-title-btn" data-open-paper="cdn">
+              <span>Content Delivery Network Design and Implementation</span>
+              <svg class="title-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </button>
+            <p class="project-summary">
+              Engineered a distributed CDN using HTTP/2 multiplexed streams and a centralized load-balancing controller to route traffic across edge replica servers.
+            </p>
+            <div class="metric-highlight">
+              <span>Transport &amp; Routing</span>
+              <strong>HTTP/2 Multiplexing &bull; Edge LB</strong>
+            </div>
           </div>
-          <div class="pill-wrap"><span class="pill">CDN</span><span class="pill">HTTP/2</span><span class="pill">Load Balancing</span></div>
+          <div class="project-footer">
+            <div class="pill-wrap">
+              <span class="pill" data-skill="HTTP/2 &amp; CDN">HTTP/2 &amp; CDN</span>
+              <span class="pill" data-skill="TCP/IP">TCP/IP</span>
+              <span class="pill" data-skill="Python">Python</span>
+            </div>
+            <div class="paper-actions">
+              <button class="paper-btn" data-open-paper="cdn">📄 Read Report (PDF)</button>
+              <a class="paper-btn-secondary" href="papers/Project Report_COEN 6711.pdf" target="_blank" rel="noopener">Direct PDF &nearr;</a>
+            </div>
+          </div>
         </article>
 
-        <article class="project-card" data-category="hardware">
+        <!-- Project 4 -->
+        <article class="surface project-card" data-category="hardware" data-project-id="stm32">
           <div>
             <div class="project-meta">
-              <span class="project-type">Embedded Systems</span>
+              <span class="project-type">Embedded IoT</span>
               <span class="project-year">Oct &ndash; Dec 2025</span>
             </div>
-            <h3>Smart Home Automation System on a Cortex-M4 STM32 Microcontroller</h3>
-            <ul>
-              <li>Built a home-safety monitor on an ARM Cortex-M4 STM32 with temperature, light, PIR motion and gas sensors.</li>
-              <li>Readings that cross a threshold trigger push notifications to the ntfy mobile app.</li>
-            </ul>
+            <button class="project-title-btn" data-open-paper="stm32">
+              <span>Smart Home Automation System on a Cortex-M4 STM32 Microcontroller</span>
+              <svg class="title-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </button>
+            <p class="project-summary">
+              Real-time multi-sensor environmental &amp; safety monitor on ARM Cortex-M4 STM32 (temperature, light, PIR motion, gas) dispatching instant ntfy mobile push alerts.
+            </p>
+            <div class="metric-highlight">
+              <span>Hardware Platform</span>
+              <strong>ARM Cortex-M4 &bull; ESP32 &bull; ntfy</strong>
+            </div>
           </div>
-          <div class="pill-wrap"><span class="pill">STM32</span><span class="pill">Cortex-M4</span><span class="pill">Sensors</span><span class="pill">ESP32</span></div>
+          <div class="project-footer">
+            <div class="pill-wrap">
+              <span class="pill" data-skill="STM32 / ESP32">STM32 / ESP32</span>
+              <span class="pill" data-skill="C++">C++</span>
+            </div>
+            <div class="paper-actions">
+              <button class="paper-btn" data-open-paper="stm32">📄 Project Brief &amp; Docs</button>
+            </div>
+          </div>
         </article>
 
-        <article class="project-card" data-category="simulation">
+        <!-- Project 5 -->
+        <article class="surface project-card" data-category="simulation" data-project-id="qualnet">
           <div>
             <div class="project-meta">
-              <span class="project-type">Network Simulation</span>
+              <span class="project-type">Wireless Simulation</span>
               <span class="project-year">Feb &ndash; Apr 2025</span>
             </div>
-            <h3>Wireless Multi-Hop Network Design &amp; Simulation (QualNet 8.2)</h3>
-            <ul>
-              <li>Benchmarked TCP vs. UDP performance across four routed subnetworks measuring throughput, end-to-end delay, retransmissions, and MAC overhead.</li>
-              <li>Quantified the impact of Rayleigh fading on latency and throughput across concurrent UDP traffic flows.</li>
-            </ul>
+            <button class="project-title-btn" data-open-paper="qualnet">
+              <span>Wireless Multi-Hop Network Design &amp; Simulation (QualNet 8.2)</span>
+              <svg class="title-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </button>
+            <p class="project-summary">
+              Benchmarked TCP vs. UDP throughput, end-to-end delay, retransmissions, and Rayleigh fading degradation across four routed wireless subnetworks.
+            </p>
+            <div class="metric-highlight">
+              <span>Channel &amp; Protocol Analysis</span>
+              <strong>4 Subnets &bull; Rayleigh Fading</strong>
+            </div>
           </div>
-          <div class="pill-wrap"><span class="pill">QualNet 8.2</span><span class="pill">TCP/UDP</span><span class="pill">Rayleigh Fading</span></div>
+          <div class="project-footer">
+            <div class="pill-wrap">
+              <span class="pill" data-skill="QualNet 8.2">QualNet 8.2</span>
+              <span class="pill" data-skill="TCP/IP">TCP/UDP</span>
+            </div>
+            <div class="paper-actions">
+              <button class="paper-btn" data-open-paper="qualnet">📄 Read Simulation Report</button>
+            </div>
+          </div>
         </article>
 
-        <article class="project-card" data-category="hardware">
+        <!-- Project 6 -->
+        <article class="surface project-card" data-category="hardware" data-project-id="vlsi">
           <div>
             <div class="project-meta">
-              <span class="project-type">VLSI Design</span>
+              <span class="project-type">VLSI Circuit Design</span>
               <span class="project-year">Oct &ndash; Dec 2024</span>
             </div>
-            <h3>Bi-directional SISO Shift Register Using D Flip-Flops</h3>
-            <ul>
-              <li>Designed a 4-bit bi-directional shift register with synchronous reset in Cadence Virtuoso, driving an off-chip load of 50 &Omega; in parallel with 10 pF.</li>
-              <li>Split the 1 mm output wire into three buffered sections to cut delay and signal degradation.</li>
-              <li>Simulated power at 25 MHz, clock-to-Q delay, setup and hold time, and compared post-layout (PEX) results with the schematic.</li>
-            </ul>
+            <button class="project-title-btn" data-open-paper="vlsi">
+              <span>Bi-directional SISO Shift Register Using D Flip-Flops (IEEE Format)</span>
+              <svg class="title-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </button>
+            <p class="project-summary">
+              Full custom schematic-to-layout design in Cadence Virtuoso driving a 50 &Omega; || 10 pF off-chip load with 3-stage buffered interconnect and post-layout PEX verification at 25 MHz.
+            </p>
+            <div class="metric-highlight">
+              <span>Verification Flow</span>
+              <strong>DRC / LVS / PEX @ 25 MHz</strong>
+            </div>
           </div>
-          <div class="pill-wrap"><span class="pill">Cadence Virtuoso</span><span class="pill">VLSI</span><span class="pill">Post-layout PEX</span></div>
+          <div class="project-footer">
+            <div class="pill-wrap">
+              <span class="pill" data-skill="Cadence Virtuoso">Cadence Virtuoso</span>
+              <span class="pill" data-skill="VLSI Design">VLSI Design</span>
+            </div>
+            <div class="paper-actions">
+              <button class="paper-btn" data-open-paper="vlsi">📄 IEEE Paper (PDF)</button>
+              <a class="paper-btn-secondary" href="papers/VLSI PROJECT_IMG.pdf" target="_blank" rel="noopener" title="View Layout & Schematic Figures">Layouts PDF &nearr;</a>
+            </div>
+          </div>
         </article>
 
-        <article class="project-card" data-category="research">
+        <!-- Project 7 -->
+        <article class="surface project-card" data-category="research" data-project-id="lastmile">
           <div>
             <div class="project-meta">
-              <span class="project-type">Telecom Infrastructure Research</span>
+              <span class="project-type">Telecom Infrastructure</span>
               <span class="project-year">2021 &ndash; 2022</span>
             </div>
-            <h3>Last Mile Solution for High-Speed Communication Systems</h3>
-            <p>
-              Assessed last-mile broadband connectivity bottlenecks in Bangladesh and proposed scalable access technologies alongside regulatory policy recommendations.
+            <button class="project-title-btn" data-open-paper="lastmile">
+              <span>Last Mile Solution for High-Speed Communication Systems</span>
+              <svg class="title-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </button>
+            <p class="project-summary">
+              Evaluated last-mile broadband bottlenecks in Bangladesh and proposed scalable fiber/wireless access architectures alongside regulatory deployment frameworks.
             </p>
+            <div class="metric-highlight">
+              <span>Scope</span>
+              <strong>BSc Thesis &bull; Access Topology</strong>
+            </div>
           </div>
-          <div class="pill-wrap">
-            <span class="pill">Last-Mile Access</span>
-            <span class="pill">Telecom Policy</span>
-            <span class="pill">Broadband</span>
+          <div class="project-footer">
+            <div class="pill-wrap">
+              <span class="pill" data-skill="LTE / 5G">Broadband Access</span>
+              <span class="pill" data-skill="LAN/WAN">Telecom Policy</span>
+            </div>
+            <div class="paper-actions">
+              <button class="paper-btn" data-open-paper="lastmile">📄 Thesis Report</button>
+              <a class="paper-btn-secondary" href="papers/Telecom Project.docx" target="_blank" rel="noopener">DOCX File &nearr;</a>
+            </div>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- Education -->
-    <section id="education">
-      <div class="section-header">
-        <h2 class="section-title">Education</h2>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="item-top">
-            <div class="item-title">Master of Engineering (MEng), Electrical and Computer Engineering</div>
-            <span class="item-date">Sep 2024 &ndash; Dec 2026</span>
-          </div>
-          <div class="item-org">Concordia University &bull; Montreal, QC, Canada</div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="item-top">
-            <div class="item-title">Bachelor of Science (BSc), Electrical and Electronics Engineering</div>
-            <span class="item-date">2017 &ndash; 2022</span>
-          </div>
-          <div class="item-org">Ahsanullah University of Science and Technology</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Certifications -->
+    <!-- Section 4: Certifications -->
     <section id="certifications">
       <div class="section-header">
-        <h2 class="section-title">Certifications</h2>
+        <div class="section-title-group">
+          <span class="section-kicker">// Verified credentials</span>
+          <h2 class="section-title">Certifications</h2>
+        </div>
       </div>
 
       <div class="cert-grid">
-        <div class="cert-card">
+        <div class="surface cert-card">
           <div class="cert-title">Graduate Leadership Program</div>
-          <div class="cert-footer"><span>GradProSkills</span><span>Sep 2024</span></div>
-          <div class="cert-footer"><span class="cert-id">Concordia University</span><a class="cert-link" href="https://app-ca.clickdimensions.com/blob/concordiaca-a8jj7/files/md.rummansarkar_gpld147.pdf" target="_blank" rel="noopener">View credential</a></div>
+          <div class="cert-footer"><span>GradProSkills &bull; Concordia</span><span>Sep 2024</span></div>
+          <div class="cert-footer"><span class="cert-id">Concordia University</span><a class="cert-link" href="https://app-ca.clickdimensions.com/blob/concordiaca-a8jj7/files/md.rummansarkar_gpld147.pdf" target="_blank" rel="noopener">View credential &nearr;</a></div>
         </div>
 
-        <div class="cert-card">
+        <div class="surface cert-card">
           <div class="cert-title">Business Analytics with Excel: Elementary to Advanced</div>
           <div class="cert-footer"><span>Johns Hopkins University</span><span>May 2024</span></div>
-          <div class="cert-footer"><span class="cert-id">ID DEABBQZ7LFRT</span><a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/DEABBQZ7LFRT" target="_blank" rel="noopener">View credential</a></div>
+          <div class="cert-footer"><span class="cert-id">ID DEABBQZ7LFRT</span><a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/DEABBQZ7LFRT" target="_blank" rel="noopener">View credential &nearr;</a></div>
         </div>
 
-        <div class="cert-card">
+        <div class="surface cert-card">
           <div class="cert-title">Crash Course on Python</div>
           <div class="cert-footer"><span>Google</span><span>May 2023</span></div>
-          <div class="cert-footer"><span class="cert-id">ID C5SQAMLHJ6LT</span><a class="cert-link" href="https://www.coursera.org/account/accomplishments/certificate/C5SQAMLHJ6LT" target="_blank" rel="noopener">View credential</a></div>
+          <div class="cert-footer"><span class="cert-id">ID C5SQAMLHJ6LT</span><a class="cert-link" href="https://www.coursera.org/account/accomplishments/certificate/C5SQAMLHJ6LT" target="_blank" rel="noopener">View credential &nearr;</a></div>
         </div>
 
-        <div class="cert-card">
+        <div class="surface cert-card">
           <div class="cert-title">Electric Industry Operations and Markets</div>
           <div class="cert-footer"><span>Coursera</span><span>Dec 2022</span></div>
-          <div class="cert-footer"><span class="cert-id">ID PBQ336K2T3WW</span><a class="cert-link" href="https://www.coursera.org/account/accomplishments/certificate/PBQ336K2T3WW" target="_blank" rel="noopener">View credential</a></div>
+          <div class="cert-footer"><span class="cert-id">ID PBQ336K2T3WW</span><a class="cert-link" href="https://www.coursera.org/account/accomplishments/certificate/PBQ336K2T3WW" target="_blank" rel="noopener">View credential &nearr;</a></div>
         </div>
       </div>
     </section>
 
-    <!-- Socials -->
+    <!-- Section 5: Interactive Engineering Sandbox (Final Main Section) -->
+    <section id="sandbox">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-kicker">// Interactive simulations inspired by my coursework &amp; projects</span>
+          <h2 class="section-title">Engineering Sandbox</h2>
+        </div>
+      </div>
+
+      <div class="surface sandbox-shell">
+        <div class="sandbox-tabs">
+          <button class="sandbox-tab active" data-sandbox="dsp">
+            <span>〰️</span> LMS vs. NLMS Speech Denoiser Lab
+          </button>
+          <button class="sandbox-tab" data-sandbox="cdn">
+            <span>🌐</span> HTTP/2 CDN Edge Load-Balancer Simulator
+          </button>
+        </div>
+
+        <!-- Sandbox Tab A: DSP LMS/NLMS -->
+        <div class="sandbox-panel active" id="panel-dsp">
+          <div class="sim-canvas-wrap">
+            <canvas id="dspCanvas"></canvas>
+          </div>
+          <div class="sim-controls">
+            <h3>Real-Time Speech Denoising</h3>
+            <p>Toggle between Normalized LMS (NLMS) and standard LMS, and adjust input noise power and decorrelation delay to see live waveform suppression and Output SNR.</p>
+            <div class="algo-toggle">
+              <button class="algo-btn active" id="btnNlms">NLMS (17.58 dB Peak)</button>
+              <button class="algo-btn" id="btnLms">LMS (15.05 dB Peak)</button>
+            </div>
+            <div class="control-row">
+              <label for="noiseSlider">Input Noise Power: <span id="noiseVal">65%</span></label>
+              <input type="range" id="noiseSlider" min="15" max="100" value="65" />
+            </div>
+            <div class="control-row">
+              <label for="delaySlider">Decorrelation Delay (Samples): <span id="delayVal">4</span></label>
+              <input type="range" id="delaySlider" min="1" max="16" value="4" />
+            </div>
+            <div class="metric-highlight">
+              <span>Simulated Output SNR</span>
+              <strong id="snrReadout">17.58 dB</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sandbox Tab B: CDN Load Balancer -->
+        <div class="sandbox-panel" id="panel-cdn">
+          <div class="sim-canvas-wrap">
+            <canvas id="cdnCanvas"></canvas>
+          </div>
+          <div class="sim-controls">
+            <h3>Edge Replica Traffic Routing</h3>
+            <p>Dispatch HTTP/2 multiplexed client bursts across Montreal, Toronto, and Ashburn edge nodes, switch routing policies, or simulate a regional node outage.</p>
+            <div class="algo-toggle">
+              <button class="algo-btn active" id="btnPolicyLeast">Least-Latency</button>
+              <button class="algo-btn" id="btnPolicyRR">Round-Robin</button>
+            </div>
+            <div class="algo-toggle">
+              <button class="algo-btn active" id="btnBurst">+ Send 15 HTTP/2 Streams</button>
+              <button class="algo-btn" id="btnOutage">Toggle Toronto Outage</button>
+              <button class="algo-btn" id="btnResetCdn">Reset</button>
+            </div>
+            <div class="metric-highlight">
+              <span>Avg Edge Latency &bull; Active Streams</span>
+              <strong id="cdnLatency">12.4 ms &bull; 0 streams</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Socials & Direct Contact -->
     <section id="socials">
       <div class="section-header">
-        <h2 class="section-title">Socials</h2>
+        <div class="section-title-group">
+          <span class="section-kicker">// Connect across platforms</span>
+          <h2 class="section-title">Socials &amp; Channels</h2>
+        </div>
       </div>
 
       <div class="social-grid">
-        <a class="social-card" href="https://www.facebook.com/rusho.rumman" target="_blank" rel="noopener noreferrer">
+        <a class="surface social-card" href="https://www.linkedin.com/in/rummanhuda/" target="_blank" rel="noopener noreferrer">
           <div class="social-left">
-            <div class="social-icon" aria-hidden="true">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </div>
+            <div class="social-icon">in</div>
             <div class="social-info">
-              <span class="social-name">Facebook</span>
-              <span class="social-handle">/rusho.rumman</span>
+              <span class="social-name">LinkedIn</span>
+              <span class="social-handle">/in/rummanhuda</span>
             </div>
           </div>
-          <span class="social-arrow" aria-hidden="true">&nearr;</span>
+          <span class="social-arrow">&nearr;</span>
         </a>
 
-        <a class="social-card" href="https://www.instagram.com/rumman_huda/" target="_blank" rel="noopener noreferrer">
+        <a class="surface social-card" href="https://github.com/rummanhuda" target="_blank" rel="noopener noreferrer">
           <div class="social-left">
-            <div class="social-icon" aria-hidden="true">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </div>
+            <div class="social-icon">GH</div>
             <div class="social-info">
-              <span class="social-name">Instagram</span>
-              <span class="social-handle">@rumman_huda</span>
+              <span class="social-name">GitHub</span>
+              <span class="social-handle">@rummanhuda</span>
             </div>
           </div>
-          <span class="social-arrow" aria-hidden="true">&nearr;</span>
+          <span class="social-arrow">&nearr;</span>
         </a>
 
-        <a class="social-card" href="https://www.youtube.com/@rumman_huda" target="_blank" rel="noopener noreferrer">
+        <a class="surface social-card" href="https://www.youtube.com/@rumman_huda" target="_blank" rel="noopener noreferrer">
           <div class="social-left">
-            <div class="social-icon" aria-hidden="true">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
-            </div>
+            <div class="social-icon">YT</div>
             <div class="social-info">
               <span class="social-name">YouTube</span>
               <span class="social-handle">@rumman_huda</span>
             </div>
           </div>
-          <span class="social-arrow" aria-hidden="true">&nearr;</span>
+          <span class="social-arrow">&nearr;</span>
+        </a>
+
+        <a class="surface social-card" href="https://www.instagram.com/rumman_huda/" target="_blank" rel="noopener noreferrer">
+          <div class="social-left">
+            <div class="social-icon">IG</div>
+            <div class="social-info">
+              <span class="social-name">Instagram</span>
+              <span class="social-handle">@rumman_huda</span>
+            </div>
+          </div>
+          <span class="social-arrow">&nearr;</span>
+        </a>
+
+        <a class="surface social-card" href="https://www.facebook.com/rusho.rumman" target="_blank" rel="noopener noreferrer">
+          <div class="social-left">
+            <div class="social-icon">FB</div>
+            <div class="social-info">
+              <span class="social-name">Facebook</span>
+              <span class="social-handle">/rusho.rumman</span>
+            </div>
+          </div>
+          <span class="social-arrow">&nearr;</span>
+        </a>
+
+        <a class="surface social-card" href="tel:+14384026789">
+          <div class="social-left">
+            <div class="social-icon">TEL</div>
+            <div class="social-info">
+              <span class="social-name">Direct Phone</span>
+              <span class="social-handle">+1 438 402 6789</span>
+            </div>
+          </div>
+          <span class="social-arrow">&nearr;</span>
         </a>
       </div>
     </section>
   </main>
 
-  <!-- Random Motivating Quote at Bottom -->
+  <!-- Motivating Quote -->
   <aside class="quote-section" aria-label="Daily motivation">
-    <div class="quote-box">
+    <div class="surface quote-box">
       <div class="quote-top">
         <span class="quote-tag">// Signal for the Day</span>
-        <button class="quote-refresh" id="newQuoteBtn" type="button" title="Load another quote">↻ New Quote</button>
+        <button class="quote-refresh" id="newQuoteBtn" type="button">↻ New Quote</button>
       </div>
       <blockquote class="quote-text" id="quoteText"></blockquote>
       <div class="quote-author" id="quoteAuthor"></div>
@@ -984,14 +1828,96 @@
   <footer>
     <div class="footer-links">
       <a href="mailto:rumman3476@gmail.com">rumman3476@gmail.com</a>
-      <a href="https://github.com/rummanhuda" target="_blank">github.com/rummanhuda</a>
+      <a href="tel:+14384026789">+1 438 402 6789</a>
+      <a href="https://github.com/rummanhuda" target="_blank">GitHub</a>
       <a href="https://www.linkedin.com/in/rummanhuda/" target="_blank">LinkedIn</a>
-      <a href="https://www.facebook.com/rusho.rumman" target="_blank">Facebook</a>
-      <a href="https://www.instagram.com/rumman_huda/" target="_blank">Instagram</a>
       <a href="https://www.youtube.com/@rumman_huda" target="_blank">YouTube</a>
     </div>
     <p>&copy; 2026 Md Rumman Huda Sarkar &bull; Montreal, Quebec, Canada</p>
   </footer>
+
+  <!-- Paper Reader & PDF Viewer Modal -->
+  <div class="modal-backdrop" id="paperModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <div class="modal-kicker" id="modalMeta">Signal Processing &bull; Apr &ndash; May 2026</div>
+          <h3 class="modal-title" id="modalTitle">Project Paper Title</h3>
+        </div>
+        <button class="modal-close" id="closeModalBtn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-toolbar">
+          <div class="modal-file-path">
+            <span>📁 Repository Path:</span>
+            <code id="modalFilePath">papers/ProjectReport_40293223.pdf</code>
+          </div>
+          <div class="modal-btns">
+            <a id="modalOpenNewTab" href="#" target="_blank" rel="noopener" class="btn btn-primary">Open PDF in New Tab &nearr;</a>
+            <a id="modalDownloadBtn" href="#" download class="btn">Download File</a>
+            <a id="modalExtraBtn" href="#" target="_blank" rel="noopener" class="btn" style="display:none;">View Layout Figures (PDF)</a>
+          </div>
+        </div>
+
+        <div class="modal-summary-grid">
+          <div class="modal-box">
+            <h4>Executive Abstract</h4>
+            <p id="modalAbstract"></p>
+          </div>
+          <div class="modal-box">
+            <h4>Key Engineering Findings</h4>
+            <ul id="modalFindings"></ul>
+          </div>
+        </div>
+
+        <div class="pdf-frame-container">
+          <div class="pdf-frame-bar">
+            <span>Embedded PDF Document Preview</span>
+            <label class="local-preview-label">
+              Or preview a PDF from your computer
+              <input type="file" id="localPdfPicker" accept="application/pdf" style="display:none;" />
+            </label>
+          </div>
+          <iframe id="pdfIframe" class="pdf-iframe" title="Project PDF Viewer"></iframe>
+          <div class="pdf-fallback-note">
+            <span>Note: Embedded preview requires the <code>papers/</code> folder in your hosted repository.</span>
+            <a id="modalFallbackLink" href="#" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: underline;">Open direct file link &nearr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GitHub Pages Folder Setup Guide Modal -->
+  <div class="modal-backdrop" id="deployModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 680px;">
+      <div class="modal-header">
+        <div>
+          <div class="modal-kicker">// GitHub Pages Deployment Checklist</div>
+          <h3 class="modal-title">How Your Project PDFs Are Linked</h3>
+        </div>
+        <button class="modal-close" id="closeDeployBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-box">
+          <h4>1. Create a <code>papers/</code> folder in your repo</h4>
+          <p style="margin-bottom:0.65rem;">Place your extracted ZIP files inside a folder named <code>papers</code> right next to <code>index.html</code> in your <code>rummanhuda.github.io</code> repository:</p>
+          <ul>
+            <li><code>papers/ProjectReport_40293223.pdf</code> &rarr; Adaptive Noise Cancellation (LMS/NLMS)</li>
+            <li><code>papers/PRoJECT6821_pdf.pdf</code> &rarr; 6G Open RAN Security Survey</li>
+            <li><code>papers/Project Report_COEN 6711.pdf</code> &rarr; CDN Design &amp; Implementation</li>
+            <li><code>papers/VLSI final Project_IEEE format.pdf</code> &rarr; VLSI Bi-directional Shift Register</li>
+            <li><code>papers/VLSI PROJECT_IMG.pdf</code> &rarr; VLSI Layout &amp; Schematic Figures</li>
+            <li><code>papers/Telecom Project.docx</code> &rarr; Wireless Multi-Hop QualNet Simulation</li>
+          </ul>
+        </div>
+        <div class="modal-box">
+          <h4>2. Instant Interactive Access</h4>
+          <p>Once pushed to GitHub, clicking any project card title or <strong>"Read Paper (PDF)"</strong> opens the built-in reader with an executive summary, findings, and embedded PDF viewer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script>
   (() => {
@@ -1000,9 +1926,186 @@
     const $ = (s, c = document) => c.querySelector(s);
     const $$ = (s, c = document) => [...c.querySelectorAll(s)];
 
-    /* ---------- Live handover demo (hero canvas) ---------- */
+    /* ---------- 1. Project Paper Database (Mapped to Uploaded Archive) ---------- */
+    const papers = {
+      anc: {
+        meta: 'Signal Processing • Apr – May 2026',
+        title: 'Adaptive Noise Cancellation of Speech Using LMS and NLMS Algorithms',
+        file: 'papers/ProjectReport_40293223.pdf',
+        abstract: 'Investigates adaptive Finite Impulse Response (FIR) filtering for speech enhancement in noisy acoustic environments using a primary speech-plus-noise channel and a correlated reference noise channel.',
+        findings: [
+          'NLMS achieved a peak output SNR of 17.58 dB compared to 15.05 dB with standard LMS.',
+          'Decorrelation delay exhibited the highest sensitivity on noise suppression performance.',
+          'Step size (μ) governed convergence stability, while filter tap length had secondary impact.'
+        ]
+      },
+      oran6g: {
+        meta: '6G / Open RAN Research • Apr – May 2026',
+        title: 'Security and Privacy in Emerging 6G Networks: A Survey of AI-Driven Solutions for Open RAN',
+        file: 'papers/PRoJECT6821_pdf.pdf',
+        abstract: 'Comprehensive survey analyzing threat surfaces across disaggregated Open RAN components (O-CU, O-DU, O-RU, Near-RT/Non-RT RIC) and evaluating AI/ML countermeasures for 6G architectures.',
+        findings: [
+          'Evaluated adversarial ML defenses across E2, A1, and O1 open interfaces.',
+          'Benchmarked Zero-Trust Architecture (ZTA) and Federated Learning for privacy-preserving RIC intelligence.',
+          'Identified open research challenges in explainable AI (XAI) anomaly detection and real-time latency constraints.'
+        ]
+      },
+      cdn: {
+        meta: 'Network Architecture • Sep – Dec 2025',
+        title: 'Content Delivery Network Design and Implementation',
+        file: 'papers/Project Report_COEN 6711.pdf',
+        extraFile: 'papers/Project Report_COEN 6711.docx',
+        extraLabel: 'Download DOCX Report',
+        abstract: 'Designs and evaluates a distributed Content Delivery Network leveraging HTTP/2 multiplexed streams and a centralized request-routing controller across geographically placed replica nodes.',
+        findings: [
+          'Eliminated head-of-line blocking at the application layer via HTTP/2 stream multiplexing.',
+          'Centralized controller dynamically routes client requests to optimal edge replicas to minimize latency.',
+          'Demonstrated significant congestion reduction under concurrent multi-client request bursts.'
+        ]
+      },
+      vlsi: {
+        meta: 'VLSI Circuit Design • Oct – Dec 2024',
+        title: 'Bi-directional SISO Shift Register Using D Flip-Flops (IEEE Format)',
+        file: 'papers/VLSI final Project_IEEE format.pdf',
+        extraFile: 'papers/VLSI PROJECT_IMG.pdf',
+        extraLabel: 'View Layout Figures (PDF)',
+        abstract: 'Full-custom transistor-level schematic and physical layout of a 4-bit bi-directional Serial-In Serial-Out (SISO) shift register with synchronous reset in Cadence Virtuoso.',
+        findings: [
+          'Segmented a 1 mm output interconnect into three buffered repeater stages to drive a 50 Ω || 10 pF off-chip load.',
+          'Characterized dynamic/static power at 25 MHz, clock-to-Q propagation delay, and setup/hold margins.',
+          'Verified post-layout parasitic extraction (PEX) against pre-layout schematic simulations.'
+        ]
+      },
+      stm32: {
+        meta: 'Embedded Systems • Oct – Dec 2025',
+        title: 'Smart Home Automation System on a Cortex-M4 STM32 Microcontroller',
+        file: 'papers/Project Report_COEN 6711.pdf',
+        abstract: 'Embedded environmental and hazard monitoring firmware built on an ARM Cortex-M4 STM32 microcontroller interfacing with temperature, ambient light, PIR motion, and gas sensors.',
+        findings: [
+          'Continuous ADC polling and threshold comparator logic detect gas leaks and unauthorized motion.',
+          'Integrated wireless uplink triggers real-time push alerts via the ntfy mobile notification protocol.',
+          'Designed for low-power deterministic embedded operation.'
+        ]
+      },
+      qualnet: {
+        meta: 'Wireless Simulation • Feb – Apr 2025',
+        title: 'Wireless Multi-Hop Network Design & Simulation (QualNet 8.2)',
+        file: 'papers/Telecom Project.docx',
+        abstract: 'Discrete-event wireless network simulation in QualNet 8.2 evaluating transport-layer behavior and physical channel impairments across four routed multi-hop subnetworks.',
+        findings: [
+          'Quantified TCP congestion window retransmissions vs. UDP throughput across multi-hop wireless links.',
+          'Measured end-to-end latency spikes and packet loss induced by Rayleigh multipath fading.',
+          'Analyzed MAC-layer contention overhead under concurrent UDP traffic flows.'
+        ]
+      },
+      lastmile: {
+        meta: 'Telecom Infrastructure • 2021 – 2022',
+        title: 'Last Mile Solution for High-Speed Communication Systems',
+        file: 'papers/Telecom Project.docx',
+        abstract: 'Undergraduate engineering thesis investigating last-mile broadband access bottlenecks in Bangladesh and proposing scalable FTTx and wireless access topologies.',
+        findings: [
+          'Assessed infrastructure deployment costs and bandwidth bottlenecks across urban and semi-urban zones.',
+          'Proposed hybrid fiber-wireless last-mile architectures for high-speed broadband delivery.',
+          'Outlined spectrum and infrastructure-sharing policy recommendations.'
+        ]
+      }
+    };
+
+    /* ---------- 2. Paper Reader Modal Logic ---------- */
+    const paperModal = $('#paperModal');
+    const modalMeta = $('#modalMeta');
+    const modalTitle = $('#modalTitle');
+    const modalFilePath = $('#modalFilePath');
+    const modalOpenNewTab = $('#modalOpenNewTab');
+    const modalDownloadBtn = $('#modalDownloadBtn');
+    const modalExtraBtn = $('#modalExtraBtn');
+    const modalFallbackLink = $('#modalFallbackLink');
+    const modalAbstract = $('#modalAbstract');
+    const modalFindings = $('#modalFindings');
+    const pdfIframe = $('#pdfIframe');
+    const localPdfPicker = $('#localPdfPicker');
+
+    function openPaperModal(id) {
+      const item = papers[id];
+      if (!item) return;
+      modalMeta.textContent = item.meta;
+      modalTitle.textContent = item.title;
+      modalFilePath.textContent = item.file;
+      modalOpenNewTab.href = item.file;
+      modalDownloadBtn.href = item.file;
+      modalFallbackLink.href = item.file;
+      modalAbstract.textContent = item.abstract;
+
+      modalFindings.innerHTML = item.findings.map(f => `<li>${f}</li>`).join('');
+
+      if (item.extraFile) {
+        modalExtraBtn.style.display = 'inline-flex';
+        modalExtraBtn.href = item.extraFile;
+        modalExtraBtn.textContent = item.extraLabel || 'Supplementary File';
+      } else {
+        modalExtraBtn.style.display = 'none';
+      }
+
+      pdfIframe.src = item.file;
+      paperModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePaperModal() {
+      paperModal.classList.remove('open');
+      pdfIframe.src = 'about:blank';
+      document.body.style.overflow = '';
+    }
+
+    $$('[data-open-paper]').forEach(btn => {
+      btn.addEventListener('click', () => openPaperModal(btn.dataset.openPaper));
+    });
+    $('#closeModalBtn').addEventListener('click', closePaperModal);
+    paperModal.addEventListener('click', e => { if (e.target === paperModal) closePaperModal(); });
+
+    localPdfPicker.addEventListener('change', e => {
+      const file = e.target.files[0];
+      if (file) {
+        const blobUrl = URL.createObjectURL(file);
+        pdfIframe.src = blobUrl;
+        modalFilePath.textContent = `Local Preview: ${file.name}`;
+      }
+    });
+
+    /* Deploy Guide Modal */
+    const deployModal = $('#deployModal');
+    $('#deployGuideBtn').addEventListener('click', () => {
+      deployModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+    $('#closeDeployBtn').addEventListener('click', () => {
+      deployModal.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+    deployModal.addEventListener('click', e => {
+      if (e.target === deployModal) {
+        deployModal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        closePaperModal();
+        deployModal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+
+    /* ---------- 3. Live Cellular Handover Canvas (Hero) ---------- */
     const hero = $('.hero'), cv = $('#mesh'), ctx = cv.getContext('2d');
-    const hud = { cell: $('#hudCell'), sig: $('#hudSig'), ho: $('#hudHo') };
+    const hud = {
+      cell: $('#hudCell'),
+      sig: $('#hudSig'),
+      ho: $('#hudHo'),
+      neighbor: $('#hudNeighbor'),
+      bars: $$('#sigBars span')
+    };
     let W = 0, H = 0, nodes = [], ue = { x: 0, y: 0 }, ptr = null, ptrUntil = 0;
     let serving = -1, handovers = 0, running = true, col = { a: '#3dd1ff', b: '#7c8cff', m: '#74829a' };
 
@@ -1020,18 +2123,18 @@
       W = hero.clientWidth; H = hero.clientHeight;
       cv.width = W * d; cv.height = H * d; ctx.setTransform(d, 0, 0, d, 0, 0);
       let s = 7; const rnd = () => (s = (s * 16807) % 2147483647) / 2147483647;
-      const cols = Math.max(3, Math.round(W / 170)), rows = Math.max(3, Math.round(H / 170));
+      const cols = Math.max(3, Math.round(W / 175)), rows = Math.max(3, Math.round(H / 165));
       nodes = [];
       for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++)
         nodes.push({ x: (c + 0.2 + 0.6 * rnd()) * W / cols, y: (r + 0.2 + 0.6 * rnd()) * H / rows, p: rnd(), d: 0 });
-      if (!ue.x) { ue.x = W * 0.7; ue.y = H * 0.45; }
+      if (!ue.x) { ue.x = W * 0.72; ue.y = H * 0.46; }
       serving = -1;
     }
 
     function step(t) {
       const live = ptr && t < ptrUntil;
-      const tx = live ? ptr.x : W * (0.5 + 0.38 * Math.sin(t * 0.00023 + 1));
-      const ty = live ? ptr.y : H * (0.5 + 0.3 * Math.sin(t * 0.00031));
+      const tx = live ? ptr.x : W * (0.58 + 0.28 * Math.sin(t * 0.00023 + 1));
+      const ty = live ? ptr.y : H * (0.48 + 0.28 * Math.sin(t * 0.00031));
       ue.x += (tx - ue.x) * 0.07; ue.y += (ty - ue.y) * 0.07;
     }
 
@@ -1053,59 +2156,361 @@
       ctx.clearRect(0, 0, W, H); ctx.lineWidth = 1;
       for (let i = 0; i < nodes.length; i++) for (let j = i + 1; j < nodes.length; j++) {
         const a = nodes[i], b = nodes[j], d = Math.hypot(a.x - b.x, a.y - b.y);
-        if (d < 230) { ctx.globalAlpha = 0.16 * (1 - d / 230); ctx.strokeStyle = col.b; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
+        if (d < 230) {
+          ctx.globalAlpha = 0.16 * (1 - d / 230);
+          ctx.strokeStyle = col.b;
+          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+        }
       }
       nodes.forEach((n, i) => {
         const k = (t * 0.00025 + n.p) % 1;
         ctx.globalAlpha = (1 - k) * 0.22; ctx.strokeStyle = col.a;
         ctx.beginPath(); ctx.arc(n.x, n.y, k * 110, 0, 6.2832); ctx.stroke();
         ctx.globalAlpha = i === serving ? 1 : 0.7; ctx.fillStyle = i === serving ? col.a : col.m;
-        ctx.beginPath(); ctx.arc(n.x, n.y, i === serving ? 4 : 2.5, 0, 6.2832); ctx.fill();
+        ctx.beginPath(); ctx.arc(n.x, n.y, i === serving ? 4.5 : 2.5, 0, 6.2832); ctx.fill();
       });
       ctx.setLineDash([4, 6]); ctx.globalAlpha = 0.45; ctx.strokeStyle = col.b;
       ctx.beginPath(); ctx.moveTo(ue.x, ue.y); ctx.lineTo(nodes[nb].x, nodes[nb].y); ctx.stroke();
-      ctx.setLineDash([]); ctx.globalAlpha = 0.9; ctx.strokeStyle = col.a; ctx.lineWidth = 1.5;
+      ctx.setLineDash([]); ctx.globalAlpha = 0.92; ctx.strokeStyle = col.a; ctx.lineWidth = 1.6;
       ctx.beginPath(); ctx.moveTo(ue.x, ue.y); ctx.lineTo(s.x, s.y); ctx.stroke();
-      ctx.globalAlpha = 1; ctx.fillStyle = col.a; ctx.beginPath(); ctx.arc(ue.x, ue.y, 4.5, 0, 6.2832); ctx.fill();
-      ctx.globalAlpha = 0.35; ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(ue.x, ue.y, 11, 0, 6.2832); ctx.stroke();
+      ctx.globalAlpha = 1; ctx.fillStyle = col.a; ctx.beginPath(); ctx.arc(ue.x, ue.y, 4.8, 0, 6.2832); ctx.fill();
+      ctx.globalAlpha = 0.35; ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(ue.x, ue.y, 12, 0, 6.2832); ctx.stroke();
       ctx.globalAlpha = 1;
+
+      const rsrp = Math.round(-62 - 24 * Math.log10(1 + s.d / 14));
       hud.cell.textContent = 'BTS-' + String(serving + 1).padStart(2, '0');
-      hud.sig.textContent = Math.round(-62 - 24 * Math.log10(1 + s.d / 14)) + ' dBm';
+      hud.neighbor.textContent = 'Target: BTS-' + String(nb + 1).padStart(2, '0');
+      hud.sig.textContent = rsrp + ' dBm';
       hud.ho.textContent = handovers;
+
+      const activeBars = rsrp > -72 ? 5 : rsrp > -80 ? 4 : rsrp > -88 ? 3 : rsrp > -95 ? 2 : 1;
+      hud.bars.forEach((b, idx) => b.classList.toggle('on', idx < activeBars));
     }
 
     const loop = t => { if (running) { step(t); draw(t); } requestAnimationFrame(loop); };
     hero.addEventListener('pointermove', e => {
       const r = hero.getBoundingClientRect();
-      ptr = { x: e.clientX - r.left, y: e.clientY - r.top }; ptrUntil = performance.now() + 2500;
+      ptr = { x: e.clientX - r.left, y: e.clientY - r.top }; ptrUntil = performance.now() + 2600;
     });
     new IntersectionObserver(([e]) => { running = e.isIntersecting; }).observe(hero);
     new ResizeObserver(() => { layout(); draw(performance.now()); }).observe(hero);
 
-    /* ---------- Dark / Light Theme Toggle ---------- */
-    const themeToggle = $('#themeToggle');
-    const themeIcon = $('#themeIcon');
-    const themeLabel = $('#themeLabel');
+    /* ---------- 4. Interactive Engineering Sandbox (DSP & CDN) ---------- */
+    $$('.sandbox-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        $$('.sandbox-tab').forEach(t => t.classList.remove('active'));
+        $$('.sandbox-panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        $('#panel-' + tab.dataset.sandbox).classList.add('active');
+      });
+    });
 
+    // DSP Waveform Visualizer
+    const dspCanvas = $('#dspCanvas'), dCtx = dspCanvas.getContext('2d');
+    let dspAlgo = 'NLMS', noiseLevel = 0.65, decorrDelay = 4, dspPhase = 0;
+    const btnNlms = $('#btnNlms'), btnLms = $('#btnLms'), noiseSlider = $('#noiseSlider'), delaySlider = $('#delaySlider');
+
+    function updateDspMetrics() {
+      const base = dspAlgo === 'NLMS' ? 17.58 : 15.05;
+      const delayPenalty = Math.abs(decorrDelay - 4) * 0.24;
+      const noisePenalty = (noiseLevel - 0.65) * 4.2;
+      const adj = Math.max(4.5, base - noisePenalty - delayPenalty).toFixed(2);
+      $('#snrReadout').textContent = `${adj} dB`;
+      $('#noiseVal').textContent = `${Math.round(noiseLevel * 100)}%`;
+      $('#delayVal').textContent = `${decorrDelay}`;
+    }
+    btnNlms.addEventListener('click', () => { dspAlgo = 'NLMS'; btnNlms.classList.add('active'); btnLms.classList.remove('active'); updateDspMetrics(); });
+    btnLms.addEventListener('click', () => { dspAlgo = 'LMS'; btnLms.classList.add('active'); btnNlms.classList.remove('active'); updateDspMetrics(); });
+    noiseSlider.addEventListener('input', e => { noiseLevel = e.target.value / 100; updateDspMetrics(); });
+    delaySlider.addEventListener('input', e => { decorrDelay = Number(e.target.value); updateDspMetrics(); });
+
+    function drawDsp() {
+      const w = dspCanvas.width = dspCanvas.clientWidth || 500;
+      const h = dspCanvas.height = 220;
+      dCtx.clearRect(0, 0, w, h);
+      dspPhase += 0.04;
+
+      // Grid line
+      dCtx.strokeStyle = 'rgba(130,170,255,0.12)';
+      dCtx.beginPath(); dCtx.moveTo(0, h / 2); dCtx.lineTo(w, h / 2); dCtx.stroke();
+
+      // Clean reference envelope (subtle green dashed)
+      dCtx.strokeStyle = 'rgba(34, 197, 94, 0.35)';
+      dCtx.setLineDash([4, 4]);
+      dCtx.lineWidth = 1.2;
+      dCtx.beginPath();
+      for (let x = 0; x < w; x += 3) {
+        const clean = Math.sin(x * 0.035 + dspPhase) * 38 * Math.sin(x * 0.008 + dspPhase * 0.4);
+        const y = h / 2 + clean;
+        x === 0 ? dCtx.moveTo(x, y) : dCtx.lineTo(x, y);
+      }
+      dCtx.stroke();
+      dCtx.setLineDash([]);
+
+      // Noisy input signal (muted indigo)
+      dCtx.strokeStyle = 'rgba(124, 140, 255, 0.42)';
+      dCtx.lineWidth = 1.3;
+      dCtx.beginPath();
+      for (let x = 0; x < w; x += 3) {
+        const clean = Math.sin(x * 0.035 + dspPhase) * 38 * Math.sin(x * 0.008 + dspPhase * 0.4);
+        const noise = (Math.sin(x * 0.45 + dspPhase * 4) + Math.cos(x * 0.9)) * 22 * noiseLevel;
+        const y = h / 2 + clean + noise;
+        x === 0 ? dCtx.moveTo(x, y) : dCtx.lineTo(x, y);
+      }
+      dCtx.stroke();
+
+      // Filtered output signal (cyan)
+      const delayFactor = 1 + Math.abs(decorrDelay - 4) * 0.08;
+      const residualFactor = (dspAlgo === 'NLMS' ? 0.11 : 0.27) * delayFactor;
+      dCtx.strokeStyle = '#3dd1ff';
+      dCtx.lineWidth = 2.2;
+      dCtx.beginPath();
+      for (let x = 0; x < w; x += 3) {
+        const clean = Math.sin(x * 0.035 + dspPhase) * 38 * Math.sin(x * 0.008 + dspPhase * 0.4);
+        const residual = Math.sin(x * 0.45 + dspPhase * 4) * 18 * noiseLevel * residualFactor;
+        const y = h / 2 + clean + residual;
+        x === 0 ? dCtx.moveTo(x, y) : dCtx.lineTo(x, y);
+      }
+      dCtx.stroke();
+
+      dCtx.fillStyle = '#a8b6cc';
+      dCtx.font = '11px JetBrains Mono, monospace';
+      dCtx.fillText(`Clean (Green) | Noisy (Indigo) | ${dspAlgo} Output (Cyan)`, 12, 20);
+      requestAnimationFrame(drawDsp);
+    }
+    requestAnimationFrame(drawDsp);
+
+    // CDN Load Balancer Visualizer
+    const cdnCanvas = $('#cdnCanvas'), cCtx = cdnCanvas.getContext('2d');
+    let edgeLoads = [22, 18, 25];
+    let edgeOffline = [false, false, false];
+    let cdnPolicy = 'least';
+    let rrPointer = 0;
+    let packets = [];
+
+    $('#btnPolicyLeast').addEventListener('click', () => {
+      cdnPolicy = 'least';
+      $('#btnPolicyLeast').classList.add('active');
+      $('#btnPolicyRR').classList.remove('active');
+    });
+    $('#btnPolicyRR').addEventListener('click', () => {
+      cdnPolicy = 'rr';
+      $('#btnPolicyRR').classList.add('active');
+      $('#btnPolicyLeast').classList.remove('active');
+    });
+
+    $('#btnOutage').addEventListener('click', () => {
+      edgeOffline[1] = !edgeOffline[1];
+      $('#btnOutage').classList.toggle('active', edgeOffline[1]);
+      $('#btnOutage').textContent = edgeOffline[1] ? 'Restore Toronto Node' : 'Toggle Toronto Outage';
+      if (edgeOffline[1]) edgeLoads[1] = 0;
+    });
+
+    $('#btnBurst').addEventListener('click', () => {
+      for (let i = 0; i < 15; i++) {
+        let chosen = -1;
+        if (cdnPolicy === 'least') {
+          let bestLoad = 999;
+          for (let n = 0; n < 3; n++) {
+            if (!edgeOffline[n] && edgeLoads[n] < bestLoad) {
+              bestLoad = edgeLoads[n];
+              chosen = n;
+            }
+          }
+        } else {
+          for (let attempt = 0; attempt < 3; attempt++) {
+            const candidate = (rrPointer + attempt) % 3;
+            if (!edgeOffline[candidate]) {
+              chosen = candidate;
+              rrPointer = (candidate + 1) % 3;
+              break;
+            }
+          }
+        }
+        if (chosen >= 0) {
+          edgeLoads[chosen] = Math.min(98, edgeLoads[chosen] + 4.5);
+          packets.push({ target: chosen, prog: -i * 0.06 });
+        }
+      }
+    });
+
+    $('#btnResetCdn').addEventListener('click', () => {
+      edgeLoads = [15, 15, 15];
+      edgeOffline = [false, false, false];
+      $('#btnOutage').classList.remove('active');
+      $('#btnOutage').textContent = 'Toggle Toronto Outage';
+      packets = [];
+    });
+
+    function drawCdn() {
+      const w = cdnCanvas.width = cdnCanvas.clientWidth || 500;
+      const h = cdnCanvas.height = 220;
+      cCtx.clearRect(0, 0, w, h);
+
+      const ctrl = { x: w * 0.22, y: h * 0.5 };
+      const edges = [
+        { x: w * 0.77, y: h * 0.22, name: 'Edge-Montreal' },
+        { x: w * 0.77, y: h * 0.50, name: 'Edge-Toronto' },
+        { x: w * 0.77, y: h * 0.78, name: 'Edge-Ashburn' }
+      ];
+
+      // Decay load gradually
+      edgeLoads = edgeLoads.map((l, idx) => edgeOffline[idx] ? 0 : Math.max(12, l - 0.04));
+      const activeLoads = edgeLoads.filter((_, idx) => !edgeOffline[idx]);
+      const avgLoad = activeLoads.reduce((a, b) => a + b, 0) / (activeLoads.length || 1);
+      const avgLat = (10.5 + avgLoad / 7.5 + (edgeOffline[1] ? 3.8 : 0)).toFixed(1);
+      const liveStreams = packets.filter(p => p.prog > 0).length;
+      $('#cdnLatency').textContent = `${avgLat} ms • ${liveStreams} streams`;
+
+      // Draw links
+      edges.forEach((edge, idx) => {
+        const isDown = edgeOffline[idx];
+        cCtx.strokeStyle = isDown ? 'rgba(239, 68, 68, 0.35)' : 'rgba(61, 209, 255, 0.28)';
+        cCtx.setLineDash(isDown ? [4, 4] : []);
+        cCtx.lineWidth = 1.5;
+        cCtx.beginPath(); cCtx.moveTo(ctrl.x, ctrl.y); cCtx.lineTo(edge.x, edge.y); cCtx.stroke();
+        cCtx.setLineDash([]);
+
+        // Edge Node Box
+        cCtx.fillStyle = isDown ? '#1f1016' : '#0f182a';
+        cCtx.strokeStyle = isDown ? '#ef4444' : '#3dd1ff';
+        cCtx.lineWidth = 1.5;
+        cCtx.beginPath();
+        cCtx.roundRect(edge.x - 62, edge.y - 18, 124, 36, 8);
+        cCtx.fill(); cCtx.stroke();
+
+        cCtx.fillStyle = isDown ? '#fca5a5' : '#eef4fc';
+        cCtx.font = '11px JetBrains Mono, monospace';
+        const label = isDown ? `${edge.name} (DOWN)` : `${edge.name} (${Math.round(edgeLoads[idx])}%)`;
+        cCtx.fillText(label, edge.x - 55, edge.y + 4);
+      });
+
+      // Animate HTTP/2 Packets
+      packets.forEach(p => {
+        p.prog += 0.025;
+        if (p.prog > 0 && p.prog <= 1) {
+          const dest = edges[p.target];
+          const px = ctrl.x + (dest.x - ctrl.x) * p.prog;
+          const py = ctrl.y + (dest.y - ctrl.y) * p.prog;
+          cCtx.fillStyle = '#22c55e';
+          cCtx.beginPath(); cCtx.arc(px, py, 4, 0, Math.PI * 2); cCtx.fill();
+        }
+      });
+      packets = packets.filter(p => p.prog <= 1);
+
+      // Controller Node
+      cCtx.fillStyle = '#3dd1ff';
+      cCtx.beginPath(); cCtx.arc(ctrl.x, ctrl.y, 24, 0, Math.PI * 2); cCtx.fill();
+      cCtx.fillStyle = '#031420';
+      cCtx.font = 'bold 11px JetBrains Mono, monospace';
+      cCtx.fillText('HTTP/2', ctrl.x - 20, ctrl.y + 4);
+
+      requestAnimationFrame(drawCdn);
+    }
+    requestAnimationFrame(drawCdn);
+
+    /* ---------- 5. Domain Switcher & Career Timeline Explorer ---------- */
+    $$('[data-domain]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        $$('[data-domain]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const dom = btn.dataset.domain;
+        $$('[data-domain-card]').forEach(card => {
+          card.classList.toggle('dimmed', dom !== 'all' && card.dataset.domainCard !== dom);
+        });
+      });
+    });
+
+    $$('[data-career-filter]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        $$('[data-career-filter]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const cFilter = btn.dataset.careerFilter;
+        const tabs = $$('.role-tab');
+        let firstVisible = null;
+        tabs.forEach(tab => {
+          const match = cFilter === 'all' || tab.dataset.careerType === cFilter;
+          tab.classList.toggle('hidden-tab', !match);
+          if (match && !firstVisible) firstVisible = tab;
+        });
+        if (firstVisible && !firstVisible.classList.contains('active')) {
+          firstVisible.click();
+        }
+      });
+    });
+
+    $$('.role-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        $$('.role-tab').forEach(t => t.classList.remove('active'));
+        $$('.role-detail').forEach(d => d.classList.remove('active'));
+        tab.classList.add('active');
+        $('#role-' + tab.dataset.role).classList.add('active');
+      });
+    });
+
+    /* ---------- 6. Interactive Project & Skill Cross-Filtering ---------- */
+    const filterBtns = $$('.filter-btn');
+    const projectCards = $$('.project-card');
+    const skillBanner = $('#skillFilterBanner');
+    const skillFilterText = $('#skillFilterText');
+    let activeCategory = 'all';
+    let activeSkill = null;
+
+    function applyProjectFilters() {
+      projectCards.forEach(card => {
+        const catMatch = activeCategory === 'all' || card.dataset.category === activeCategory;
+        const cardSkills = $$('[data-skill]', card).map(el => el.dataset.skill.toLowerCase());
+        const skillMatch = !activeSkill || cardSkills.some(s => s.includes(activeSkill.toLowerCase()));
+        card.classList.toggle('hidden', !(catMatch && skillMatch));
+      });
+
+      $$('[data-skill]').forEach(pill => {
+        pill.classList.toggle('selected', activeSkill && pill.dataset.skill.toLowerCase() === activeSkill.toLowerCase());
+      });
+
+      if (activeSkill) {
+        skillBanner.classList.add('visible');
+        skillFilterText.textContent = `Showing projects using: ${activeSkill}`;
+      } else {
+        skillBanner.classList.remove('visible');
+      }
+    }
+
+    filterBtns.forEach(btn => btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeCategory = btn.dataset.filter;
+      applyProjectFilters();
+    }));
+
+    $$('[data-skill]').forEach(pill => {
+      pill.addEventListener('click', () => {
+        const chosen = pill.dataset.skill;
+        activeSkill = (activeSkill === chosen) ? null : chosen;
+        applyProjectFilters();
+        if (activeSkill) {
+          $('#projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    $('#clearSkillFilter').addEventListener('click', () => {
+      activeSkill = null;
+      applyProjectFilters();
+    });
+
+    /* ---------- 7. Theme Toggle, Copy Email, Quotes, Scroll Spy ---------- */
+    const themeToggle = $('#themeToggle'), themeIcon = $('#themeIcon'), themeLabel = $('#themeLabel');
     function applyTheme(t) {
-      const mode = (t === 'light' || t === 'daylight') ? 'light' : 'dark';
+      const mode = t === 'light' ? 'light' : 'dark';
       root.setAttribute('data-theme', mode);
       try { localStorage.setItem('portfolio-theme', mode); } catch (e) {}
-      if (mode === 'light') {
-        themeIcon.textContent = '🌙';
-        themeLabel.textContent = 'Dark';
-      } else {
-        themeIcon.textContent = '☀️';
-        themeLabel.textContent = 'Light';
-      }
+      themeIcon.textContent = mode === 'light' ? '🌙' : '☀️';
+      themeLabel.textContent = mode === 'light' ? 'Dark' : 'Light';
       readColors();
       draw(performance.now());
     }
-
-    themeToggle.addEventListener('click', () => {
-      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      applyTheme(next);
-    });
+    themeToggle.addEventListener('click', () => applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
 
     let saved = null;
     try { saved = localStorage.getItem('portfolio-theme'); } catch (e) {}
@@ -1113,65 +2518,46 @@
     applyTheme(saved || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
     if (!reduce) requestAnimationFrame(loop);
 
-    /* ---------- Copy email ---------- */
     const copyBtn = $('#copyEmailBtn'), copyText = $('#copyEmailText');
     copyBtn.addEventListener('click', () => {
       const email = copyBtn.getAttribute('data-email');
-      navigator.clipboard.writeText(email).then(() => {
-        copyText.textContent = 'Copied!';
-        setTimeout(() => { copyText.textContent = email; }, 2000);
-      }).catch(() => { location.href = 'mailto:' + email; });
+      const tempInput = document.createElement('input');
+      tempInput.value = email;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+      copyText.textContent = 'Copied to clipboard!';
+      setTimeout(() => { copyText.textContent = email; }, 2000);
     });
 
-    /* ---------- Project filter ---------- */
-    const filterBtns = $$('.filter-btn'), cards = $$('.project-card');
-    filterBtns.forEach(btn => btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active')); btn.classList.add('active');
-      const f = btn.dataset.filter;
-      cards.forEach(c => c.classList.toggle('hidden', f !== 'all' && c.dataset.category !== f));
-    }));
-
-    /* ---------- Random Motivating Quote ---------- */
     const quotes = [
-      { q: "The best way to predict the future is to invent it.", a: "Alan Kay" },
-      { q: "Success is the sum of small efforts, repeated day in and day out.", a: "Robert Collier" },
-      { q: "Quality is not an act, it is a habit.", a: "Aristotle" },
-      { q: "Simplicity is the ultimate sophistication.", a: "Leonardo da Vinci" },
-      { q: "Scientists study the world as it is; engineers create the world that has never been.", a: "Theodore von Karman" },
-      { q: "Persistence guarantees that results are inevitable.", a: "Paramahansa Yogananda" },
-      { q: "Do not wait to strike till the iron is hot; but make it hot by striking.", a: "William Butler Yeats" },
-      { q: "Strive for perfection in everything you do. Take the best that exists and make it better.", a: "Sir Henry Royce" },
-      { q: "Hard work beats talent when talent doesn't work hard.", a: "Tim Notke" },
       { q: "The fundamental problem of communication is that of reproducing at one point either exactly or approximately a message selected at another point.", a: "Claude Shannon" },
-      { q: "What we achieve inwardly will change outer reality.", a: "Plutarch" },
-      { q: "It always seems impossible until it's done.", a: "Nelson Mandela" },
-      { q: "Discipline is choosing between what you want now and what you want most.", a: "Abraham Lincoln" },
+      { q: "Scientists study the world as it is; engineers create the world that has never been.", a: "Theodore von Karman" },
       { q: "Focus on the signal, filter out the noise.", a: "Engineering Maxim" },
-      { q: "Great things are not done by impulse, but by a series of small things brought together.", a: "Vincent van Gogh" }
+      { q: "Simplicity is the ultimate sophistication.", a: "Leonardo da Vinci" },
+      { q: "Quality is not an act, it is a habit.", a: "Aristotle" },
+      { q: "The best way to predict the future is to invent it.", a: "Alan Kay" }
     ];
-
-    const quoteText = $('#quoteText');
-    const quoteAuthor = $('#quoteAuthor');
-    const newQuoteBtn = $('#newQuoteBtn');
     let lastIdx = -1;
-
     function pickRandomQuote() {
       let idx = Math.floor(Math.random() * quotes.length);
-      if (quotes.length > 1 && idx === lastIdx) {
-        idx = (idx + 1 + Math.floor(Math.random() * (quotes.length - 1))) % quotes.length;
-      }
+      if (idx === lastIdx) idx = (idx + 1) % quotes.length;
       lastIdx = idx;
-      quoteText.textContent = `"${quotes[idx].q}"`;
-      quoteAuthor.textContent = `— ${quotes[idx].a}`;
+      $('#quoteText').textContent = `"${quotes[idx].q}"`;
+      $('#quoteAuthor').textContent = `— ${quotes[idx].a}`;
     }
-
     pickRandomQuote();
-    newQuoteBtn.addEventListener('click', pickRandomQuote);
+    $('#newQuoteBtn').addEventListener('click', pickRandomQuote);
 
-    /* ---------- Scroll progress and active nav link ---------- */
     const bar = $('#progress');
-    const onScroll = () => { const h = root.scrollHeight - innerHeight; bar.style.transform = 'scaleX(' + (h > 0 ? scrollY / h : 0) + ')'; };
-    addEventListener('scroll', onScroll, { passive: true }); onScroll();
+    const onScroll = () => {
+      const h = root.scrollHeight - innerHeight;
+      bar.style.transform = 'scaleX(' + (h > 0 ? scrollY / h : 0) + ')';
+    };
+    addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
     const links = $$('.nav-links a');
     const io = new IntersectionObserver(es => es.forEach(e => {
       if (e.isIntersecting) links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
